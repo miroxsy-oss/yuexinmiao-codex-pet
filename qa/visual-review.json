@@ -1,0 +1,11 @@
+{
+  "result": "pass",
+  "reviewer": "independent visual_qa",
+  "states_checked": 9,
+  "mapping": "matches user selection",
+  "warnings": [
+    "idle and waving retain thin white source edge on dark background.",
+    "waving is a half-body source with straight lower edge."
+  ],
+  "scope": "Existing v1 adaptation; no generation or v2 certification"
+}

@@ -1,0 +1,11 @@
+{
+  "technical_ok": true,
+  "format": "v1",
+  "frame_review_errors": 0,
+  "frame_review_warnings": 0,
+  "atlas_errors": 0,
+  "atlas_warnings": 0,
+  "independent_checks": 44,
+  "visual_status": "pass_with_documented_source_features",
+  "redistribution_permission": "not_fully_verified"
+}
