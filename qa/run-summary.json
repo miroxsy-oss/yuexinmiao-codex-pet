@@ -7,5 +7,8 @@
   "atlas_warnings": 0,
   "independent_checks": 44,
   "visual_status": "pass_with_documented_source_features",
-  "redistribution_permission": "not_fully_verified"
+  "redistribution_permission": "not_fully_verified",
+  "status_consistency_ok": false,
+  "full_acceptance": "incomplete",
+  "status_consistency_report": "docs/STATE_AUDIT.md"
 }
