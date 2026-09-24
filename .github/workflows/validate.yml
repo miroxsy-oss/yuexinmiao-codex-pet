@@ -1,0 +1,19 @@
+name: Validate pet package
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install image dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt
+      - name: Validate package and pixel-exact rebuild
+        run: .venv/bin/python scripts/check.py
+      - name: Test installation and repeated installation
+        run: |
+          .venv/bin/python scripts/install.py --codex-home "${RUNNER_TEMP}/pet-install-check"
+          .venv/bin/python scripts/install.py --codex-home "${RUNNER_TEMP}/pet-install-check"
