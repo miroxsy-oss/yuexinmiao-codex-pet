@@ -31,7 +31,7 @@ def install(home):
         if staged.exists():shutil.rmtree(staged)
     print(f'Installed: {target}')
     if backup:print(f'Previous version backed up: {backup}')
-    print('Select 月薪喵 · 自选组合 in the Codex pet picker. Existing selection is unchanged.')
+    print('Select 月星喵桌面宠物 in the Codex pet picker. Existing selection is unchanged.')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--codex-home',type=Path,default=Path(os.environ.get('CODEX_HOME',Path.home()/'.codex')));a=p.parse_args();install(a.codex_home.expanduser().resolve())
