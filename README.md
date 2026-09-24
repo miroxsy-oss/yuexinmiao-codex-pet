@@ -6,7 +6,11 @@
 
 **仅供个人、非商业使用。** 原角色与素材作者另见署名；组合适配不等于原创角色声明。
 
-![动作总览](previews/contact-sheet.png)
+| 电脑前抱鱼 | 打招呼 | 捂鼻扇风 |
+|---|---|---|
+| ![摸鱼](previews/animations/idle.gif) | ![招呼](previews/animations/waving.gif) | ![扇风](previews/animations/jumping.gif) |
+
+[查看全部动作总览](previews/contact-sheet.png)
 
 ## 动作
 
@@ -61,6 +65,8 @@ macOS 如果没有 `python` 命令，可使用 `python3`。安装不需要 Pillo
 - 从已批准的源帧重建：与安装图集逐字节一致。
 
 具体检查、可视问题与适用边界见 [自检报告](docs/SELF_CHECK.md)。本包为 v1 混合素材适配，不宣称 v2 方向视线认证。idle 与 waving 两行动作保留细白边与半身造型；程序通过不等于视觉完全无瑕疵。
+
+每次推送或提交 Pull Request，GitHub Actions 会自动检查图集与源帧的一致性。
 
 ## 重建与检查
 
