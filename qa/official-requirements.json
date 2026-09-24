@@ -1,0 +1,23 @@
+{
+  "format": "WEBP",
+  "mode": "RGBA",
+  "size": [
+    1536,
+    1872
+  ],
+  "bytes": 498198,
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "under_20_MiB": true,
+  "installed_byte_equal": true,
+  "sha256": "5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431",
+  "manifest": {
+    "id": "yuexinmiao-selected",
+    "displayName": "月薪喵桌面宠物",
+    "description": "由 miroxsy-oss 制作、适配与维护的 Codex 桌面宠物，包含 9 种动态状态；供个人非商业使用，原角色与图像权利归相应权利人。",
+    "spriteVersionNumber": 1,
+    "spritesheetPath": "spritesheet.webp"
+  }
+}

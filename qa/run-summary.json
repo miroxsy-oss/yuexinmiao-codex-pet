@@ -8,5 +8,8 @@
   "independent_checks": 44,
   "visual_status": "pass_with_documented_source_features",
   "redistribution_permission": "not_fully_verified",
-  "reference": "WenNinghan/yuexinmiao-codex-pet v3.0.1"
+  "reference": "WenNinghan/yuexinmiao-codex-pet v3.0.1",
+  "status_consistency_ok": false,
+  "full_acceptance": "incomplete",
+  "status_consistency_report": "docs/STATE_AUDIT.md"
 }
