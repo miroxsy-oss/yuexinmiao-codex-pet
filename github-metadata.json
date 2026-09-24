@@ -1,7 +1,7 @@
 {
-  "name": "yuexingmiao-codex-pet",
+  "name": "yuexinmiao-codex-pet",
   "visibility": "public",
-  "description": "月星喵桌面宠物｜Codex 动态宠物与桌面美化｜9 种状态，直接安装｜miroxsy-oss 制作与维护｜个人非商业使用",
+  "description": "月薪喵桌面宠物｜Codex 动态宠物与桌面美化｜9 种状态，直接安装｜miroxsy-oss 制作与维护｜个人非商业使用",
   "topics": [
     "codex",
     "codex-pet",
@@ -11,8 +11,7 @@
     "yuexinmiao",
     "pet-sprites",
     "personal-use",
-    "non-commercial",
-    "yuexingmiao"
+    "non-commercial"
   ],
   "owner": "miroxsy-oss"
 }
