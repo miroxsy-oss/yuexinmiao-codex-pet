@@ -1,0 +1,537 @@
+{
+  "ok": true,
+  "automated_checks": {
+    "manifest": true,
+    "sprite_version": true,
+    "sprite_path": true,
+    "WEBP": true,
+    "RGBA": true,
+    "1536x1872": true,
+    "transparent_RGB_zero": true,
+    "rebuild_pixel_equal": true,
+    "idle: valid frames": true,
+    "idle: unused cells transparent": true,
+    "idle: no cell edge clipping": true,
+    "idle: animation changes": true,
+    "running-right: valid frames": true,
+    "running-right: unused cells transparent": true,
+    "running-right: no cell edge clipping": true,
+    "running-right: animation changes": true,
+    "running-left: valid frames": true,
+    "running-left: unused cells transparent": true,
+    "running-left: no cell edge clipping": true,
+    "running-left: animation changes": true,
+    "waving: valid frames": true,
+    "waving: unused cells transparent": true,
+    "waving: no cell edge clipping": true,
+    "waving: animation changes": true,
+    "jumping: valid frames": true,
+    "jumping: unused cells transparent": true,
+    "jumping: no cell edge clipping": true,
+    "jumping: animation changes": true,
+    "failed: valid frames": true,
+    "failed: unused cells transparent": true,
+    "failed: no cell edge clipping": true,
+    "failed: animation changes": true,
+    "waiting: valid frames": true,
+    "waiting: unused cells transparent": true,
+    "waiting: no cell edge clipping": true,
+    "waiting: animation changes": true,
+    "running: valid frames": true,
+    "running: unused cells transparent": true,
+    "running: no cell edge clipping": true,
+    "running: animation changes": true,
+    "review: valid frames": true,
+    "review: unused cells transparent": true,
+    "review: no cell edge clipping": true,
+    "review: animation changes": true
+  },
+  "errors": [],
+  "rows": [
+    {
+      "state": "idle",
+      "frames": 6,
+      "unique_images": 6,
+      "alpha_boxes": [
+        [
+          9,
+          44,
+          183,
+          178
+        ],
+        [
+          9,
+          44,
+          183,
+          178
+        ],
+        [
+          9,
+          44,
+          183,
+          178
+        ],
+        [
+          9,
+          44,
+          183,
+          178
+        ],
+        [
+          9,
+          44,
+          183,
+          178
+        ],
+        [
+          9,
+          44,
+          183,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        1.7099,
+        0.95812,
+        1.46758,
+        1.7644,
+        0.92341,
+        1.6695
+      ]
+    },
+    {
+      "state": "running-right",
+      "frames": 8,
+      "unique_images": 8,
+      "alpha_boxes": [
+        [
+          12,
+          31,
+          178,
+          178
+        ],
+        [
+          12,
+          31,
+          173,
+          178
+        ],
+        [
+          12,
+          31,
+          179,
+          178
+        ],
+        [
+          12,
+          31,
+          180,
+          178
+        ],
+        [
+          12,
+          31,
+          178,
+          178
+        ],
+        [
+          12,
+          31,
+          173,
+          178
+        ],
+        [
+          12,
+          31,
+          179,
+          178
+        ],
+        [
+          12,
+          31,
+          180,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        0.63734,
+        1.84323,
+        1.87563,
+        0.28884,
+        1.86281,
+        1.87688,
+        0.39729,
+        0.68408
+      ]
+    },
+    {
+      "state": "running-left",
+      "frames": 8,
+      "unique_images": 8,
+      "alpha_boxes": [
+        [
+          14,
+          31,
+          180,
+          178
+        ],
+        [
+          19,
+          31,
+          180,
+          178
+        ],
+        [
+          13,
+          31,
+          180,
+          178
+        ],
+        [
+          12,
+          31,
+          180,
+          178
+        ],
+        [
+          14,
+          31,
+          180,
+          178
+        ],
+        [
+          19,
+          31,
+          180,
+          178
+        ],
+        [
+          13,
+          31,
+          180,
+          178
+        ],
+        [
+          12,
+          31,
+          180,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        0.63734,
+        1.84323,
+        1.87563,
+        0.28884,
+        1.86281,
+        1.87688,
+        0.39729,
+        0.68408
+      ]
+    },
+    {
+      "state": "waving",
+      "frames": 4,
+      "unique_images": 4,
+      "alpha_boxes": [
+        [
+          17,
+          28,
+          175,
+          178
+        ],
+        [
+          10,
+          30,
+          182,
+          178
+        ],
+        [
+          10,
+          30,
+          182,
+          178
+        ],
+        [
+          10,
+          30,
+          182,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        16.42293,
+        0.15309,
+        0.17087,
+        16.40524
+      ]
+    },
+    {
+      "state": "jumping",
+      "frames": 5,
+      "unique_images": 5,
+      "alpha_boxes": [
+        [
+          36,
+          39,
+          154,
+          164
+        ],
+        [
+          25,
+          40,
+          141,
+          164
+        ],
+        [
+          25,
+          39,
+          140,
+          164
+        ],
+        [
+          40,
+          46,
+          155,
+          164
+        ],
+        [
+          36,
+          39,
+          152,
+          164
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        20.92686,
+        8.14648,
+        30.55512,
+        16.08489,
+        11.40817
+      ]
+    },
+    {
+      "state": "failed",
+      "frames": 8,
+      "unique_images": 8,
+      "alpha_boxes": [
+        [
+          33,
+          40,
+          150,
+          168
+        ],
+        [
+          32,
+          45,
+          150,
+          168
+        ],
+        [
+          34,
+          42,
+          155,
+          168
+        ],
+        [
+          41,
+          41,
+          159,
+          168
+        ],
+        [
+          43,
+          40,
+          159,
+          168
+        ],
+        [
+          43,
+          45,
+          160,
+          168
+        ],
+        [
+          38,
+          42,
+          159,
+          168
+        ],
+        [
+          34,
+          41,
+          152,
+          168
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        11.13631,
+        18.87526,
+        13.48091,
+        5.91923,
+        10.70945,
+        18.56045,
+        13.52814,
+        5.92061
+      ]
+    },
+    {
+      "state": "waiting",
+      "frames": 6,
+      "unique_images": 4,
+      "alpha_boxes": [
+        [
+          15,
+          36,
+          172,
+          173
+        ],
+        [
+          15,
+          36,
+          172,
+          173
+        ],
+        [
+          6,
+          36,
+          173,
+          172
+        ],
+        [
+          6,
+          36,
+          173,
+          172
+        ],
+        [
+          8,
+          36,
+          172,
+          172
+        ],
+        [
+          8,
+          36,
+          172,
+          172
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        0.00394,
+        6.69239,
+        0.0,
+        5.56162,
+        0.0,
+        1.62911
+      ]
+    },
+    {
+      "state": "running",
+      "frames": 6,
+      "unique_images": 5,
+      "alpha_boxes": [
+        [
+          12,
+          42,
+          180,
+          178
+        ],
+        [
+          12,
+          42,
+          180,
+          178
+        ],
+        [
+          12,
+          42,
+          180,
+          178
+        ],
+        [
+          12,
+          42,
+          180,
+          178
+        ],
+        [
+          12,
+          42,
+          180,
+          178
+        ],
+        [
+          12,
+          44,
+          180,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        3.43101,
+        3.43101,
+        3.1741,
+        3.16199,
+        12.65274,
+        13.15384
+      ]
+    },
+    {
+      "state": "review",
+      "frames": 6,
+      "unique_images": 4,
+      "alpha_boxes": [
+        [
+          21,
+          28,
+          171,
+          178
+        ],
+        [
+          21,
+          28,
+          171,
+          178
+        ],
+        [
+          21,
+          28,
+          171,
+          178
+        ],
+        [
+          21,
+          28,
+          171,
+          178
+        ],
+        [
+          21,
+          28,
+          171,
+          178
+        ],
+        [
+          21,
+          28,
+          171,
+          178
+        ]
+      ],
+      "successive_MAE_including_loop": [
+        2.73141,
+        2.40432,
+        2.40336,
+        2.40336,
+        2.40432,
+        2.73141
+      ]
+    }
+  ],
+  "checksums": {
+    "dist/yuexinmiao-selected/pet.json": "418c46275333c5845a4c94aacb666f80e498e37232384158745357e5e609be07",
+    "dist/yuexinmiao-selected/spritesheet.webp": "5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431"
+  },
+  "visual_findings": "See qa/visual-review.json and docs/SELF_CHECK.md. Automated success is not visual perfection or a redistribution license."
+}
