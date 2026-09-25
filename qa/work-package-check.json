@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "checks": {
+    "format": true,
+    "unchanged_other_rows": true,
+    "pixel_exact_slot_0": true,
+    "pixel_exact_slot_1": true,
+    "pixel_exact_slot_2": true,
+    "pixel_exact_slot_3": true,
+    "pixel_exact_slot_4": true,
+    "pixel_exact_slot_5": true,
+    "unused_slots_transparent": true,
+    "manifest": true,
+    "checksum:dist/yuexinmiao-selected/pet.json": true,
+    "checksum:dist/yuexinmiao-selected/spritesheet.webp": true,
+    "checksum:dist/yuexinmiao-work-fanning/pet.json": true,
+    "checksum:dist/yuexinmiao-work-fanning/spritesheet.webp": true
+  },
+  "note": "Frame repetition is deliberate; real-device evidence and untested states are documented in docs/MOBILE_WORK.md."
+}

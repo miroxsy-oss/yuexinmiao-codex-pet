@@ -1,0 +1,23 @@
+{
+  "desktop-pet-live.png": {
+    "source": "User-provided actual desktop screenshot from this session",
+    "crop": [
+      0,
+      0,
+      658,
+      757
+    ],
+    "note": "Unchanged approved fanning action; not a new full desktop state test"
+  },
+  "mobile-work-live.png": {
+    "source": "Actual iPhone Mirroring Work test 2026-09-26",
+    "crop": [
+      25,
+      653,
+      660,
+      824
+    ],
+    "note": "Only public test task status and pet; no account UI"
+  },
+  "privacy_review": "Cropped deliverables visually checked before inclusion; full screenshots excluded"
+}

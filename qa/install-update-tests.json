@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "tests": 6,
+  "coverage": [
+    "fresh and repeat install",
+    "noninteractive update requires choice",
+    "replacement backup",
+    "keep both and repeat",
+    "user cancellation",
+    "rollback on failed commit"
+  ],
+  "real_user_installation_modified_by_tests": false
+}

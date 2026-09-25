@@ -2,7 +2,7 @@
 
 # v1 图集自检 · v1 atlas self-check
 
-日期：2026-09-25。对象：月薪喵桌面宠物。安装图集 SHA-256：
+日期：2026-09-25。对象：月薪喵 Codex Pet。安装图集 SHA-256：
 `5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431`
 
 ## 结论

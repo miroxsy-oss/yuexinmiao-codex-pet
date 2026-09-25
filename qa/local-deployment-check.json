@@ -44,7 +44,10 @@
     "review: README GIF consistent": true,
     "review: GIF timing unchanged": true,
     "all README image links resolve": true,
-    "44 package checks passed": true
+    "44 package checks passed": true,
+    "installed pet.json matches candidate": true,
+    "installed spritesheet.webp matches candidate": true,
+    "active selection": true
   },
   "changed_frames": [
     "source/frames/idle/00.png",
@@ -153,5 +156,7 @@
   "actual_codex_window_verified": false,
   "mobile_work_updated": false,
   "github_updated_this_turn": false,
-  "release_published": false
+  "release_published": false,
+  "installed_path": "$HOME/[private-path-removed]",
+  "backup_path": "$HOME/[private-path-removed]"
 }
