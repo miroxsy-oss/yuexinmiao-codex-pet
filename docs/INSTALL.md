@@ -6,8 +6,8 @@ Two ready-made editions, two setup paths: install locally for the Codex Pet, and
 
 ## 1. 桌面端 · Desktop
 
-1. 下载仓库 ZIP 并解压，进入解压目录。<br>
-   Download and extract the repository ZIP; open the extracted folder.
+1. 下载 v1.1.0 Release 附件 `yuexinmiao-codex-pet-v1.1.0.zip` 并解压，进入解压目录。<br>
+   Download and extract the v1.1.0 release asset `yuexinmiao-codex-pet-v1.1.0.zip`; open the extracted folder.
 
 2. macOS 运行 `python3 scripts/install.py`；Windows 运行 `python scripts/install.py`。需要先有 Python。<br>
    On macOS run `python3 scripts/install.py`; on Windows run `python scripts/install.py`. Python must be installed.

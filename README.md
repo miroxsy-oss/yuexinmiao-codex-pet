@@ -2,8 +2,6 @@
 
 **[下载 v1.1.0 · Download](https://github.com/miroxsy-oss/yuexinmiao-codex-pet/releases/tag/v1.1.0)** · [本次更新 / Release notes](docs/RELEASE-v1.1.0.md)
 
-![月薪喵项目宣传图 · Yuexinmiao launch poster](docs/images/launch-poster.png)
-
 **让月薪喵陪你写代码，也陪你摸会儿鱼。**<br>
 **A little desktop companion for coding sessions and well-earned breaks.**
 
@@ -59,9 +57,9 @@ Download and open the preview in a browser to compare 32–192 px sizes, light/d
 
 ## 快速安装 · Quick start
 
-下载仓库 ZIP 并解压，在解压后的目录运行以下命令。安装完成后，在 Codex 的宠物选择器中选择 **「月薪喵 Codex Pet」**。
+下载上方 Release 中的 `yuexinmiao-codex-pet-v1.1.0.zip` 并解压，在解压后的目录运行以下命令。安装完成后，在 Codex 的宠物选择器中选择 **「月薪喵 Codex Pet」**。
 
-Download and extract the repository ZIP, then run the following command from the extracted directory. In the Codex pet picker, select **「月薪喵 Codex Pet」**.
+Download and extract `yuexinmiao-codex-pet-v1.1.0.zip` from the release above, then run this command in the extracted directory. In the Codex pet picker, select **「月薪喵 Codex Pet」**.
 
 ```sh
 python scripts/install.py
@@ -137,23 +135,6 @@ The Work atlas is account-level and also applies on the web; the local nine-stat
 
 👉 **[完整安装、更新与手机验收指南 · Full setup and verification guide](docs/INSTALL.md)** · **[实测范围 · Test scope](docs/MOBILE_WORK.md)**
 
-## 桌面版动作说明 · Desktop animation states
-
-| 应用状态 · State | 宠物表现 · Animation |
-| --- | --- |
-| `idle` | 电脑前抱鱼摸鱼 · Relaxing with a fish by the monitor |
-| `running-right` | 向右移动 · Moving right |
-| `running-left` | 向左移动 · Moving left |
-| `waving` | 举爪打招呼 · Raising paws in greeting |
-| `jumping` | 经典捂鼻扇风 · Covering the nose and fanning |
-| `failed` | 抱头崩溃 · Holding the head in frustration |
-| `waiting` | 坐着看手机 · Sitting and checking the phone |
-| `running` | 边吃零食边敲键盘 · Snacking while typing |
-| `review` | 电脑前挠头审阅 · Scratching the head at the computer |
-
-`jumping` 是应用的状态名称，本项目为它配置了捂鼻扇风动作。<br>
-`jumping` is the app's state name; this pet uses the nose-covering and fanning gesture for that state.
-
 ## 检查与兼容性 · Validation and compatibility
 
 **[官方公开要求逐项审计 / Audit against public OpenAI requirements](docs/OFFICIAL_AUDIT.md)**：v1 为官方明确支持的格式；本地 v2 创作建议不能作为否定 v1 兼容性的依据。
@@ -166,18 +147,18 @@ Uses the Codex custom-pet v1 format: nine states, 57 active frame slots, and a t
 
 | 检查项 · Check | 结果 · Result |
 | --- | --- |
-| 逐帧检查 · Frame inspection | 0 错误、0 警告 · 0 errors, 0 warnings |
-| 已安装图集检查 · Installed atlas validation | 0 错误、0 警告 · 0 errors, 0 warnings |
-| 独立包检查 · Independent package checks | 44 项通过 · 44 checks passed |
+| 图集结构 · Atlas structure | 有效帧非空、未用格透明、无切格越界 · Active frames nonempty, unused cells transparent, no cell-edge clipping |
+| 安装更新测试 · Installer update tests | 6 项通过 · 6 passed |
+| 独立包检查 · Independent package checks | 桌面 44、Work 14 项通过 · Desktop 44, Work 14 passed |
 | 源帧重建 · Rebuild from source frames | 与已验证图集逐字节一致 · Byte-identical to the validated atlas |
 
 仓库附带自动检查配置、黑白底预览与完整检查记录。已修正待机和打招呼动作的外轮廓白边；打招呼仍保留原素材的半身造型，详见 [自检报告](docs/SELF_CHECK.md)。
 
 The repository includes automated checks, previews on black and white backgrounds, and validation records. Exterior light fringes in idle and greeting have been corrected; the greeting retains its original partial-body composition. See the [validation report](docs/SELF_CHECK.md) for details.
 
-适用于支持自定义宠物的 **Codex 桌面应用**；同一图集也已通过 ChatGPT 网页官方上传入口用于 Work。手机使用路径与验证边界见上方教程。本项目不是独立桌宠程序或通用 App 皮肤。
+适用于支持自定义宠物的 **Codex 桌面应用**；Work 专用图集也已通过 ChatGPT 网页官方上传入口用于 Work。手机使用路径与验证边界见上方教程。本项目不是独立桌宠程序或通用 App 皮肤。
 
-Designed for the **Codex desktop app** with custom-pet support. The same atlas has also been uploaded through ChatGPT’s official web UI for Work. See the guide above for the mobile workflow and validation limits. This is not a standalone Codex Pet application or a general app theme.
+Designed for the **Codex desktop app** with custom-pet support. The Work-specific atlas has also been uploaded through ChatGPT’s official web UI for Work. See the guide above for the mobile workflow and validation limits. This is not a standalone Codex Pet application or a general app theme.
 
 ### 状态显示限制 · Status-display limitation
 
@@ -198,13 +179,17 @@ For everyday use, installation is all you need. To rebuild or validate the atlas
 python -m pip install -r requirements.txt
 python scripts/build.py
 python scripts/check.py
+python scripts/check_docs.py
+python scripts/build_work.py
+python scripts/check_work.py
+python -m unittest discover -s tests -q
 ```
 
-最终源帧位于 `source/frames/`，动作映射见 `source/selection.json`，检查结果保存在 `qa/`。
+最终源帧位于 `source/frames/`，动作映射见 `source/selection.json`，当前检查结果保存在 `qa/`，旧实测记录单独保存在 `qa/history/`。
 
-Approved source frames are in `source/frames/`, animation mappings are in `source/selection.json`, and validation results are in `qa/`.
+Approved source frames are in `source/frames/`, animation mappings are in `source/selection.json`, and current validation results are in `qa/`, with earlier device evidence separated into `qa/history/`.
 
-## 使用说明与致谢 · Usage and credits
+## 使用与权利 · Usage and rights
 
 本项目由 **@miroxsy-oss** 完成素材整理、动作适配、测试、打包与维护。原角色及图像素材的权利归相应权利人所有，本项目不主张拥有这些原始素材的版权，也不代表官方授权或合作。
 
@@ -214,8 +199,8 @@ Approved source frames are in `source/frames/`, animation mappings are in `sourc
 
 For personal, noncommercial use only. Contributions that the maintainer has the right to license may not be sold, distributed for a fee, or used in commercial promotions or products. Third-party asset use and redistribution remain subject to the relevant rights holders' permissions; permission to publicly redistribute the complete asset package has not yet been confirmed.
 
-详细说明见 [使用条款](LICENSE.md) 与 [素材来源及致谢](docs/ATTRIBUTION.md)。<br>
-See the [usage terms](LICENSE.md) and [asset attribution](docs/ATTRIBUTION.md) for details.
+详细说明见 [使用条款](LICENSE.md) 与 [素材与权利说明](docs/ATTRIBUTION.md)。<br>
+See the [usage terms](LICENSE.md) and [artwork and rights](docs/ATTRIBUTION.md) for details.
 
 ## 支持这个项目 · Support the project
 
@@ -231,3 +216,18 @@ If you enjoy this little companion, or it saves you time generating, selecting, 
 更新时的旧版处理与 iPhone 镜像验收流程见 [安装指南](docs/INSTALL.md)。Work 新版验证后，由用户选择清理旧条目或保留；本机备份始终保留。
 
 See the [installation guide](docs/INSTALL.md) for older-version handling and iPhone Mirroring verification. After validating the new Work entry, the user chooses whether to remove or retain older entries; local backups are retained.
+
+## 项目宣传图 · Project poster
+
+<details>
+<summary>展开宣传图 · View the poster</summary>
+
+![月薪喵项目宣传图 · Yuexinmiao launch poster](docs/images/launch-poster.png)
+
+</details>
+
+[参与维护 · Contributing](CONTRIBUTING.md) · [安全与反馈 · Security](SECURITY.md) · [图集规格 · Atlas contract](docs/REFERENCE.md) · [当前与历史检查 · Validation scope](qa/README.md)
+
+自动化检查配置覆盖 Linux、macOS 和 Windows；具体通过状态以 GitHub Actions 结果为准。这些是包与安装器测试，不是三个系统上的应用 UI 实测。
+
+The workflow targets Linux, macOS, and Windows; consult GitHub Actions for actual results. These are package and installer checks, not live application UI tests on all three systems.

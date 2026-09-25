@@ -1,4 +1,7 @@
-# 状态核验 · State audit
+# 宿主播放器限制 · Host-player limitations
+
+> 本文记录播放器行为限制，不是当前安装包的结构验收失败；当前包检查见 [QA 范围](../qa/README.md)。
+> This report concerns host-player limitations, not a failed structural check of the current package. See [QA scope](../qa/README.md) for current package checks.
 
 结论：图集九行的状态、帧数映射正确；但当前桌面播放器不能持续用工作动画表达整个执行过程，因此不满足“任务未结束就一直显示工作动作”的要求。
 

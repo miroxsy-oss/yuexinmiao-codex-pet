@@ -3,7 +3,7 @@
   "rows": [
     {
       "destination": "idle",
-      "source_version": "tinsiag",
+      "source_version": "collected-set-a",
       "source_row": 2,
       "source_indices": [
         0,
@@ -70,7 +70,7 @@
     },
     {
       "destination": "waving",
-      "source_version": "tinsiag",
+      "source_version": "collected-set-a",
       "source_row": 3,
       "source_indices": [
         0,

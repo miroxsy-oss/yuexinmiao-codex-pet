@@ -1,17 +1,17 @@
-# 素材来源 · Asset sources
+# 素材与权利说明 · Artwork and rights
 
-| 素材 · Asset | 本包用途 · Use in this package | 来源 · Source |
-| --- | --- | --- |
-| Tinsiag / YueXinMiaoPet | `idle`、`waving` | https://github.com/Tinsiag/YueXinMiaoPet |
-| kiffin / Community Meme | `jumping`、`failed`、`waiting` | https://codex-pet.org/pets/yuexinmiao1/ |
-| 原个人适配版 / LLMPET 月薪喵 GIF · Original personal adaptation / LLMPET Yuexinmiao GIFs | 左右移动、`running`、`review` · Left/right movement, `running`, `review` | https://github.com/myunwang/LLMPET/tree/main/assets/cat |
-| 月薪喵 · Yuexinmiao | 原始角色及表情 · Original character and expressions | https://github.com/myunwang/LLMPET/blob/main/assets/cat/CREDITS.md |
+原角色作者：月薪喵。维护者仅负责本组合包的搜集、整理与适配。
 
-WenNinghan 仅作为 v1 工程规范和检查报告结构参考，未把其图像或构建脚本装入本包： https://github.com/WenNinghan/yuexinmiao-codex-pet<br>
-WenNinghan was used only as a reference for v1 engineering specifications and report structure. Its images and build scripts are not bundled here: https://github.com/WenNinghan/yuexinmiao-codex-pet.
+Original character author: Yuexinmiao (月薪喵). The maintainer only curates, organizes, and adapts this package.
 
-2026-09-25 核对：Tinsiag 将项目描述为个人研究、非商业示例，不主张拥有角色与源 GIF 版权；LLMPET 的图片署名说明保留原作者权利；Community Meme 下载页没有提供已核实的、覆盖本次混搭后再次公开分发的许可。<br>
-Checked September 25, 2026: Tinsiag describes the project as a personal-research, noncommercial example and does not claim copyright over the character or source GIFs. LLMPET’s image credits retain the original authors’ rights. No verified license covering public redistribution of this combined package was provided on the Community Meme download page.
+本项目由维护者搜集网络素材，进行选帧、动画编排、尺寸适配、边缘处理、验证和打包。角色及原始表情不是本项目原创；整理与适配不代表取得角色或全部素材的所有权。
 
-这是一份已查到的来源与授权状态记录，不是新授予的许可，也不将“非商业”“侵权联系删除”当作授权替代。<br>
-This records the sources and permission status found; it grants no new permission. “Noncommercial” and “contact for removal” statements are not substitutes for authorization.
+The maintainer collects artwork from the web and handles frame selection, animation sequencing, sizing, edge cleanup, validation, and packaging. The character and original expressions are not original creations of this project. Curation and adaptation do not confer ownership of the character or all artwork.
+
+本说明不授予第三方素材新的许可。完整素材包的公开再分发许可尚未核实；个人、非商业用途说明不能替代权利人的许可，也不代表官方授权或合作。
+
+This notice grants no new license to third-party artwork. Permission to publicly redistribute the complete asset package has not been verified. A personal, noncommercial designation does not replace permission from rights holders or imply official authorization or affiliation.
+
+使用范围见 [LICENSE.md](../LICENSE.md)。
+
+See [LICENSE.md](../LICENSE.md) for the permitted scope of the maintainer's contributions.

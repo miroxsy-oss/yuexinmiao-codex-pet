@@ -1,11 +1,22 @@
-# 参考标准 · Reference standards
+# 图集结构与检查依据 · Atlas structure and validation basis
 
-- [Codex Pet 图集规范 · Codex Pet atlas specification](https://github.com/WenNinghan/yuexinmiao-codex-pet/blob/main/docs/CODEX_PET_SPEC.md)
-- [检查报告 · Validation report](https://github.com/WenNinghan/yuexinmiao-codex-pet/blob/main/docs/VALIDATION.md)
-- [项目介绍 · Project README](https://github.com/WenNinghan/yuexinmiao-codex-pet/blob/main/README.md)
+本项目按公开产品文档与实际图集结构进行检查，不属于官方认证。
 
-核对日期：2026-09-25。当时读取的参考项目发布说明版本为 3.0.1。<br>
-Checked September 25, 2026. The reference project’s release notes read at that time were version 3.0.1.
+This project validates its atlas against public product documentation and its actual structure; this is not official certification.
 
-本包采用其 v1 尺寸、帧布局、透明要求、预览与报告组织方式。参考不等于官方认证或视觉资产许可。<br>
-This package follows the reference’s v1 dimensions, frame layout, transparency requirements, and preview/report organization. Using it as a reference does not imply official certification or a license to the visual assets.
+| 项目 · Item | 约定 · Contract |
+| --- | --- |
+| 图集 · Atlas | 1536×1872，透明 WebP · Transparent WebP |
+| 格子 · Cells | 8×9，每格 192×208 · 8×9, 192×208 per cell |
+| 格式版本 · Sprite version | 1 |
+| 有效帧位 · Active slots | 57 |
+| 各行动作帧数 · Frames per row | 6 / 8 / 8 / 4 / 5 / 8 / 6 / 6 / 6 |
+| 未用格子 · Unused cells | 15，全部透明 · 15, fully transparent |
+
+行顺序：idle、running-right、running-left、waving、jumping、failed、waiting、running、review。机器标识保留英文；jumping 槽位使用捂鼻扇风动作。
+
+Row order: idle, running-right, running-left, waving, jumping, failed, waiting, running, review. Machine identifiers remain in English; the jumping slot uses the nose-covering and fanning gesture.
+
+公开依据：[Pets](https://learn.chatgpt.com/docs/pets) 与 [Commands / Pets](https://learn.chatgpt.com/docs/reference/commands#pets)。具体版本的校验值见根目录 CHECKSUMS.sha256；格式合格不保证所有客户端都触发全部动作。
+
+Public sources: [Pets](https://learn.chatgpt.com/docs/pets) and [Commands / Pets](https://learn.chatgpt.com/docs/reference/commands#pets). See CHECKSUMS.sha256 in the package root for version-specific hashes. Valid formatting does not guarantee that every client triggers every animation.
