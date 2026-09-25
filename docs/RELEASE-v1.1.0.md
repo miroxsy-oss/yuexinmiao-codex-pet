@@ -1,3 +1,5 @@
+**月薪喵 · Yuexinmiao Codex Pet**
+
 提供桌面九状态版与手机 Work 捂鼻扇风专用版。由 [@miroxsy-oss](https://github.com/miroxsy-oss) 整理、适配与维护。
 
 Includes the nine-state desktop edition and the fanning edition for mobile Work. Curated, adapted, and maintained by [@miroxsy-oss](https://github.com/miroxsy-oss).
