@@ -196,7 +196,7 @@
   ],
   "size_policy": "192x208. Meme pixels unchanged. Other rows share one crop and scale per row, fit 174x150 without upscaling, bottom 178. Original animation and frame order retained.",
   "postprocessing": {
-    "idle_and_waving": "Exterior white-matte decontamination; see qa/outline-cleanup.json",
+    "idle_and_waving": "R3 boundary-local white matte cleanup, ink de-ringing, alpha antialias, isolated edge fleck cleanup; see qa/outline-cleanup.json",
     "other_frames": "unchanged"
   }
 }

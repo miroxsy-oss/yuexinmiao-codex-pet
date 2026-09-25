@@ -13,6 +13,10 @@ jobs:
           .venv/bin/python -m pip install -r requirements.txt
       - name: Validate package and pixel-exact rebuild
         run: .venv/bin/python scripts/check.py
+      - name: Validate Work variant and installer update choices
+        run: |
+          .venv/bin/python scripts/check_work.py
+          .venv/bin/python -m unittest discover -s tests -q
       - name: Test installation and repeated installation
         run: |
           .venv/bin/python scripts/install.py --codex-home "${RUNNER_TEMP}/pet-install-check"

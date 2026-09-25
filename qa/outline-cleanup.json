@@ -1,18 +1,18 @@
 {
-  "method": "exterior white-matte alpha decontamination adjacent to brown outline",
+  "method": "r3: white-matte decontamination; boundary-local ink de-ringing and alpha antialias; interior pixels preserved",
   "changed_pixels": {
-    "source/frames/idle/00.png": 886,
-    "source/frames/idle/01.png": 896,
-    "source/frames/idle/02.png": 876,
-    "source/frames/idle/03.png": 871,
-    "source/frames/idle/04.png": 891,
-    "source/frames/idle/05.png": 883,
-    "source/frames/waving/00.png": 533,
-    "source/frames/waving/01.png": 660,
-    "source/frames/waving/02.png": 649,
-    "source/frames/waving/03.png": 652
+    "source/frames/idle/00.png": 3592,
+    "source/frames/idle/01.png": 3598,
+    "source/frames/idle/02.png": 3603,
+    "source/frames/idle/03.png": 3577,
+    "source/frames/idle/04.png": 3591,
+    "source/frames/idle/05.png": 3595,
+    "source/frames/waving/00.png": 3100,
+    "source/frames/waving/01.png": 2948,
+    "source/frames/waving/02.png": 2948,
+    "source/frames/waving/03.png": 2946
   },
-  "geometry_and_timing": "unchanged",
+  "geometry_and_timing": "canvas, registration, frame order and timing unchanged; silhouette antialias locally refined",
   "scope": [
     "idle",
     "waving"

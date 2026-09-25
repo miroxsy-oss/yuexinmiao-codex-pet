@@ -1,6 +1,6 @@
 # 官方公开要求审计 · Public official requirements audit
 
-核验日期 / Checked: 2026-09-25。对象 / Package: 月薪喵桌面宠物。
+核验日期 / Checked: 2026-09-25。对象 / Package: 月薪喵 Codex Pet。
 本次范围为技术兼容性；不评价再分发许可。No redistribution-permission assessment in this technical audit.
 
 ## 公开依据 · Public sources
