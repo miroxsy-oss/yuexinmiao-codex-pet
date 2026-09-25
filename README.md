@@ -18,17 +18,18 @@ Collected from online sources, with animation sequencing, sizing, testing, packa
 **个人使用 · 非商业用途 · 非官方项目**<br>
 **Personal use · Noncommercial · Unofficial project**
 
-## 实际使用效果 · In use
+## 使用效果预览 · In-use preview
 
-| Codex 桌面浮窗 · Desktop | iPhone Work 任务内 · Mobile |
+| Codex 桌面浮窗 · Desktop overlay | iPhone Work 任务内 · In-task pet |
 | :---: | :---: |
-| ![桌面实机局部 · Desktop pet in use](docs/images/desktop-pet-live.png) | ![iPhone Work 实机局部 · Mobile Work pet in use](docs/images/mobile-work-live.png) |
+| <img src="previews/animations/v1.1.0/desktop-idle.gif" width="160" alt="摸鱼待机动图 · Animated desktop idle"> | <img src="previews/animations/v1.1.0/work-mini.gif" width="64" alt="迷你捂鼻扇风动图 · Miniature Work fanning animation"> |
+| **摸鱼待机 · Relaxing while idle** | **捂鼻扇风 · Nose-covering and fanning** |
+| 空闲时的默认动作 · Default idle animation | 已测试任务处理中的动作 · Animation observed during tested task processing |
 
-桌面图取自实际使用截图，保留宠物与聊天控件；手机图取自本次 iPhone 镜像验收，仅保留工具状态与宠物。均已裁去个人信息和无关界面。桌面是可浮动宠物，手机是在 Work 任务状态旁显示的迷你动画。
+两栏复用原始动画素材：桌面按已测试播放器的待机节奏循环，Work 缩小展示任务旁的迷你形象。这是动作预览，不是屏幕录像；手机实际大小、速度和显示时机由 Work 控制。<br>
+Both previews reuse the existing artwork: desktop follows the tested idle playback timing, while Work shows a miniature task-side pet. These are animation previews, not screen recordings; Work controls the actual mobile size, speed, and visibility.
 
-Actual application screenshots, cropped to the pet and relevant controls/status text. Personal information and unrelated UI are excluded. Desktop uses a floating companion; mobile shows a miniature animation beside Work task status.
-
-## 动态效果 · Preview
+## 桌面九种动作 · Nine desktop animations
 
 **[实际尺寸与播放预览 / Size and playback preview](previews/size-and-playback.html)**：下载后用浏览器打开，可切换 32–192 px、深浅背景和实际播放规则。下方 GIF 仅用于循环展示动作，不承诺应用持续显示该状态。
 
@@ -101,22 +102,15 @@ The internal folder name remains `yuexinmiao-selected`; the display name is 「�
 | 本机 Codex · Desktop | `dist/yuexinmiao-selected/` | 保留九种动作，由桌面应用触发 · Nine animations, triggered by the desktop app |
 | 手机／网页 Work · Mobile / web | `dist/yuexinmiao-work-fanning/spritesheet.webp` | 手机已测试的处理中场景播放捂鼻扇风 · Fanning during tested mobile processing stages |
 
-![Work 捂鼻扇风 · Work fanning preview](previews/animations/v1.1.0/work-fanning.gif)
+### 相比 v1.0.0 的变化 · What changed since v1.0.0
 
-*素材循环预览，播放速度不代表手机实际帧率。 / Artwork loop preview; timing is not a measurement of the mobile player.*
+**手机 Work：挠头思考 → 捂鼻扇风；桌面：保留全部九种动作。** 已测试的手机思考、搜索和 Python 处理中只观察到同一组动画，因此 v1.1.0 的 Work 专用版改用更有辨识度的招牌动作。上方小动图展示的就是这组素材，原始帧保持不变。<br>
+**Mobile Work: head-scratching → nose-covering and fanning. Desktop: all nine animations retained.** Only one animation group was observed during tested mobile reasoning, search, and Python processing, so the v1.1.0 Work edition uses the more recognizable signature gesture. The miniature preview above shows these unchanged source frames.
 
-### 手机实际会显示什么？ · What appears on mobile?
+2026-09-26 的 iPhone 镜像实测已确认新版在 Python 处理与搜索时播放捂鼻扇风，完成后图标隐藏。官方默认宠物在同类场景中也未见明显的动作组切换。**这不等于手机官方只支持一种状态**；等待授权、失败等其他分支仍待验证。<br>
+iPhone Mirroring tests on September 26, 2026 confirmed fanning during Python processing and search, with the icon hidden after completion. The official default pet also showed no clear animation-group switch in comparable scenarios. **This does not establish that mobile officially supports only one state**; approval waits, failures, and other branches remain unverified.
 
-2026-09-26 通过 **iPhone 镜像实机测试**：原九状态图集在思考、联网搜索和 Python 计算处理中只观察到挠头看电脑这一组动画。临时切换官方默认 Codex 宠物进行对照，在这些场景下同样未观察到明显的动作组切换；任务完成后，处理中宠物图标消失。<br>
-On-device tests through iPhone Mirroring on September 26, 2026 observed the same head-scratching animation during reasoning, web search, and Python-task processing with the original atlas. The official default Codex pet also showed no clear animation-group switch in those tested scenarios. The processing icon disappeared after completion.
-
-**相比 v1.0.0：手机 Work 从「挠头思考」改为经典「捂鼻扇风」。** 由于目前在已测试的处理中场景只观察到同一组动画，未见其他动作切换，v1.1.0 的 Work 专用版选择更有辨识度、更能代表月薪喵的招牌动作，替换手机当前调用的动画槽位。完全复用已确认的原始帧，不重绘角色，本机 Codex 九种动作保持不变。新版已在手机的 Python 处理和联网搜索阶段实测播放，并采集到不同动作帧：<br>
-**Compared with v1.0.0, the v1.1.0 Work edition changes head-scratching to the signature nose-covering and fanning gesture.** Because only one animation group was observed across the tested processing scenarios, this edition uses the character’s more recognizable signature gesture in that slot. It reuses approved pixels without redrawing the character and preserves all nine local desktop animations. Python processing and web search were verified on the phone, with distinct motion frames captured.
-
-![iPhone Work 捂鼻扇风采样 · Cropped mobile fanning samples](docs/images/mobile-work-motion.png)
-
-**这不等于“手机官方只支持一种状态”。** 目前只确认上述场景的表现；等待授权、失败等其他状态是否会触发不同动作，仍需后续实测或官方说明确认。这里的“常驻动作”仅指宠物出现时使用这组动作，不代表任务完成后仍常驻屏幕。动作播放与隐藏由 Work 控制。<br>
-**This is not a claim that mobile officially supports only one state.** Only the scenarios above are confirmed. Approval waits, failures, and other branches require further testing or official confirmation. “Default gesture” here means the animation used while the pet is visible, not an icon that stays on screen after task completion. Work controls when the icon appears and disappears.
+[实机截图与完整测试范围 · Device captures and full test scope](docs/MOBILE_WORK.md)
 
 ### 怎么使用 · Setup
 

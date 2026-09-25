@@ -37,7 +37,15 @@ The Work edition replaces v1.0.0’s head-scratching animation with the signatur
 - 手机存在设置同步／缓存延迟。首次测试仍显示旧宠物，不计为通过；重新进入应用并核对个性化设置后，已验证新动作及多帧变化。<br>
   Mobile settings may synchronize slowly or retain cached artwork. The first test still showed the old pet and was not counted as a pass. Reopening the app and checking personalization settings was followed by verified new motion with distinct frames.
 
+<details>
+<summary>原始手机采样截图（低分辨率证据）· Original mobile samples (low-resolution evidence)</summary>
+
+这些画面来自手机任务旁的小图标，放大后清晰度有限，用于证明实机中出现了不同动作帧。没有用原始素材替换截图中的像素；清晰的动作展示请看 README 顶部动图。<br>
+These samples were captured from the small task-side icon; enlarging them cannot recover detail. They document distinct frames observed on the device. Screenshot pixels have not been replaced with source artwork; see the animated previews at the top of the README for a clearer view of the gesture.
+
 ![手机处理阶段的四次采样，局部放大 · Four cropped, magnified mobile processing samples](images/mobile-work-motion.png)
+
+</details>
 
 公开仓库仅含宠物局部截图，不包含个人设置、账号或完整对话截图。当前维护者账号已启用新版并清理旧 Work 条目；下载者需在自己的账号上传、选择和验证。<br>
 Public screenshots exclude personal settings, account details, and full conversations. The maintainer’s account has the new entry selected and older Work entries removed; users must upload, select, and verify it in their own accounts.
