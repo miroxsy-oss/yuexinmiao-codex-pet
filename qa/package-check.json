@@ -91,12 +91,12 @@
         ]
       ],
       "successive_MAE_including_loop": [
-        1.7099,
-        0.95812,
-        1.46758,
-        1.7644,
-        0.92341,
-        1.6695
+        1.68403,
+        0.92219,
+        1.41561,
+        1.74217,
+        0.90738,
+        1.60276
       ]
     },
     {
@@ -260,10 +260,10 @@
         ]
       ],
       "successive_MAE_including_loop": [
-        16.42293,
-        0.15309,
-        0.17087,
-        16.40524
+        15.69626,
+        0.16874,
+        0.17925,
+        15.6929
       ]
     },
     {
@@ -531,7 +531,7 @@
   ],
   "checksums": {
     "dist/yuexinmiao-selected/pet.json": "4a81775998d15a19d25cd0fbb661b35b7b1f826cab6bb6f0b4a34f43ad9f9bcf",
-    "dist/yuexinmiao-selected/spritesheet.webp": "5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431"
+    "dist/yuexinmiao-selected/spritesheet.webp": "498805cd4a6245649efa4a9d7b4c3dc88ba3e2f545ac52bf046f4b7f4c7a1600"
   },
   "visual_findings": "See qa/visual-review.json and docs/SELF_CHECK.md. Automated success is not visual perfection or a redistribution license."
 }

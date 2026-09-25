@@ -1,0 +1,20 @@
+{
+  "method": "exterior white-matte alpha decontamination adjacent to brown outline",
+  "changed_pixels": {
+    "source/frames/idle/00.png": 886,
+    "source/frames/idle/01.png": 896,
+    "source/frames/idle/02.png": 876,
+    "source/frames/idle/03.png": 871,
+    "source/frames/idle/04.png": 891,
+    "source/frames/idle/05.png": 883,
+    "source/frames/waving/00.png": 533,
+    "source/frames/waving/01.png": 660,
+    "source/frames/waving/02.png": 649,
+    "source/frames/waving/03.png": 652
+  },
+  "geometry_and_timing": "unchanged",
+  "scope": [
+    "idle",
+    "waving"
+  ]
+}

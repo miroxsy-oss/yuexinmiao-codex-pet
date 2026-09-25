@@ -1,5 +1,7 @@
 # 月薪喵桌面宠物 · Yuexinmiao Desktop Pet
 
+![月薪喵项目发布宣传图：让可爱的陪伴跑在代码里](docs/images/launch-poster.png)
+
 **让月薪喵陪你写代码，也陪你摸会儿鱼。**  
 **A little desktop companion for coding sessions and well-earned breaks.**
 
@@ -125,9 +127,9 @@ Uses the Codex custom-pet v1 format: nine states, 57 active frame slots, and a t
 | 独立包检查 · Independent package checks | 44 项通过 · 44 checks passed |
 | 源帧重建 · Rebuild from source frames | 与已验证图集逐字节一致 · Byte-identical to the validated atlas |
 
-仓库附带自动检查配置、黑白底预览与完整检查记录。部分动作保留细白边、半身造型等原有视觉特征，详见 [自检报告（中文）](docs/SELF_CHECK.md)。
+仓库附带自动检查配置、黑白底预览与完整检查记录。已修正待机和打招呼动作的外轮廓白边；打招呼仍保留原素材的半身造型，详见 [自检报告（中文）](docs/SELF_CHECK.md)。
 
-The repository includes automated checks, previews on black and white backgrounds, and validation records. Some animations retain thin light outlines or partial-body compositions from the source artwork. See the [validation report (Chinese)](docs/SELF_CHECK.md) for details.
+The repository includes automated checks, previews on black and white backgrounds, and validation records. Exterior light fringes in idle and greeting have been corrected; the greeting retains its original partial-body composition. See the [validation report (Chinese)](docs/SELF_CHECK.md) for details.
 
 适用于支持自定义宠物的 **Codex 桌面应用**；同一图集也已通过 ChatGPT 网页官方上传入口用于 Work。手机使用路径与验证边界见上方教程。本项目不是独立桌宠程序或通用 App 皮肤。
 
