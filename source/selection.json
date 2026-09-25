@@ -194,5 +194,9 @@
       "source_sha256": "34ef47f1da6381ae07698f7336758d3d05654482506c02d6ffd41a0ac5db48d6"
     }
   ],
-  "size_policy": "192x208. Meme pixels unchanged. Other rows share one crop and scale per row, fit 174x150 without upscaling, bottom 178. Original animation and frame order retained."
+  "size_policy": "192x208. Meme pixels unchanged. Other rows share one crop and scale per row, fit 174x150 without upscaling, bottom 178. Original animation and frame order retained.",
+  "postprocessing": {
+    "idle_and_waving": "Exterior white-matte decontamination; see qa/outline-cleanup.json",
+    "other_frames": "unchanged"
+  }
 }

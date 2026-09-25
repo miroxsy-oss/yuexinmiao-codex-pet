@@ -4,8 +4,8 @@
   "states_checked": 9,
   "mapping": "matches user selection",
   "warnings": [
-    "idle and waving retain thin white source edge on dark background.",
-    "waving is a half-body source with straight lower edge."
+    "Greeting is a half-body source with a straight lower edge."
   ],
-  "scope": "Existing v1 adaptation; no generation or v2 certification"
+  "scope": "Existing v1 adaptation; no generation or v2 certification",
+  "outline_followup": "Exterior white matte corrected; see outline-regression.json and docs/OUTLINE_FIX.md."
 }
