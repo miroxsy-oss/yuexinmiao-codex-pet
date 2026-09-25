@@ -1,5 +1,3 @@
-# 月薪喵 · Yuexinmiao Codex Pet v1.0.0
-
 首个公开版本，由 [@miroxsy-oss](https://github.com/miroxsy-oss) 整理、适配与维护。喜欢的话欢迎给仓库一个 Star！
 
 The first public release, curated, adapted, and maintained by [@miroxsy-oss](https://github.com/miroxsy-oss). If you enjoy it, a Star is welcome!
