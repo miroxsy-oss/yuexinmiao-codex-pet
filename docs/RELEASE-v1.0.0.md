@@ -27,6 +27,24 @@ Mobile running animation was tested, but not all nine states individually. This 
 
 ## 使用范围 · Usage scope
 
-个人非商业使用，非官方项目。使用条款和第三方权利说明见仓库 LICENSE.md 与 docs/ATTRIBUTION.md。最新中英对照说明见 [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme)；历史安装包保持原样。
+个人非商业使用，非官方项目。使用条款和第三方权利说明见仓库 LICENSE.md 与 docs/ATTRIBUTION.md。最新中英对照说明见 [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme)。
 
-Personal, noncommercial use; an unofficial project. See the repository’s LICENSE.md and docs/ATTRIBUTION.md for terms and third-party rights. See the [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme) for updated bilingual documentation; historical installation archives remain unchanged.
+Personal, noncommercial use; an unofficial project. See the repository’s LICENSE.md and docs/ATTRIBUTION.md for terms and third-party rights. See the [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme) for updated bilingual documentation.
+
+## 同版本附件修订 · Same-version asset refresh
+
+2026-09-26：替换本版本安装包，同步中英说明、配置描述、安装提示和校验值，清理不必要的工程比较文案。项目版本号不变，原图集、动作、帧数和画风不变。已安装用户无需为本次文案修订重新上传 Work 宠物。
+
+September 26, 2026: the package for this version was replaced to synchronize bilingual documentation, manifest descriptions, installer messages, and checksums, and to remove unnecessary engineering comparisons. The release version, original atlas, animations, frame counts, and visual style are unchanged. Existing users do not need to reupload their Work pet for this documentation refresh.
+
+请下载上方列出的专用安装 ZIP 并按本页 SHA256SUMS.txt 校验。同名附件的校验值已变化，旧下载仍可使用原有素材。
+
+Download the named installation ZIP listed above and verify it against this release's SHA256SUMS.txt. The replacement archive has a new checksum; older downloads retain their original artwork.
+
+本次为经维护者确认的同版本替换，发布标签同步指向本次修订提交，使专用 ZIP 与自动 Source code 归档都包含修订文案。旧提交保留在 Git 历史中。
+
+This maintainer-approved same-version replacement also updates the release tag to the revised commit, so both the named ZIP and automatic Source code archives include the refreshed documentation. Earlier commits remain in Git history.
+
+本次也同步了安装器的替换备份／并存选择及对应测试；仅安装管理发生更新，v1.0.0 图集不变。
+
+The installer also receives replacement-with-backup / keep-both choices and their tests. Installation management is updated; the v1.0.0 atlas is unchanged.

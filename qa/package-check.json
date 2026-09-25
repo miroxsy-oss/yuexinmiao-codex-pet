@@ -530,8 +530,8 @@
     }
   ],
   "checksums": {
-    "dist/yuexinmiao-selected/pet.json": "c1a2230f15c5357cef0b0eacbfd9d59f3754f7be179667b6209eac7685c6d415",
+    "dist/yuexinmiao-selected/pet.json": "db4dbd08ad494685b3272166756972e8f142e051d98c6156db53333455473570",
     "dist/yuexinmiao-selected/spritesheet.webp": "9236aecd9c2de4937c6f21d4a26752d7591f9b2ea7b1913ceec353a62b773e7b"
   },
-  "visual_findings": "See qa/visual-review.json and docs/SELF_CHECK.md. Automated success is not visual perfection or a redistribution license."
+  "visual_findings": "视觉范围见 docs/SELF_CHECK.md；自动检查不等于视觉完美或再分发授权。 / See docs/SELF_CHECK.md for visual scope; automated success is not visual perfection or a redistribution license."
 }

@@ -33,6 +33,6 @@ for row,(state,count) in enumerate(STATES):
         diffs.append(round(sum(ImageStat.Stat(ImageChops.difference(aa,bb)).mean)/3,5))
     rows.append({'state':state,'frames':count,'unique_images':len(set(hashes)),'alpha_boxes':boxes,'successive_MAE_including_loop':diffs})
 checksums={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(pet.glob('*')) if p.is_file()}
-report={'ok':not errors,'automated_checks':checks,'errors':errors,'rows':rows,'checksums':checksums,'visual_findings':'See qa/visual-review.json and docs/SELF_CHECK.md. Automated success is not visual perfection or a redistribution license.'}
+report={'ok':not errors,'automated_checks':checks,'errors':errors,'rows':rows,'checksums':checksums,'visual_findings':'视觉范围见 docs/SELF_CHECK.md；自动检查不等于视觉完美或再分发授权。 / See docs/SELF_CHECK.md for visual scope; automated success is not visual perfection or a redistribution license.'}
 (ROOT/'qa/package-check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'ok':not errors,'checks':len(checks),'errors':errors},ensure_ascii=False));sys.exit(bool(errors))

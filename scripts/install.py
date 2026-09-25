@@ -12,14 +12,14 @@ def install(home,existing=None):
     payload={name:(source/name).read_bytes() for name in ['pet.json','spritesheet.webp']}
     for name,data in payload.items():
         if hashlib.sha256(data).hexdigest()!=expected[f'dist/yuexinmiao-selected/{name}']:
-            raise ValueError(f'Checksum mismatch: {name}')
+            raise ValueError(f'校验值不符 / Checksum mismatch: {name}')
     manifest=json.loads(payload['pet.json'])
     if manifest['id']!='yuexinmiao-selected' or manifest['spritesheetPath']!='spritesheet.webp':
-        raise ValueError('Invalid package manifest')
+        raise ValueError('安装配置无效 / Invalid package manifest')
     pets=home/'pets';target=pets/'yuexinmiao-selected'
     def same(path):
         return path.is_dir() and all((path/n).is_file() and (path/n).read_bytes()==data for n,data in payload.items())
-    if target.is_symlink():raise ValueError('Refusing to replace a symlink')
+    if target.is_symlink():raise ValueError('拒绝覆盖符号链接 / Refusing to replace a symlink')
     if same(target):
         print(f'Already installed / 已安装同一版本: {target}');return target
     if target.exists():
@@ -33,14 +33,14 @@ def install(home,existing=None):
             if answer not in ('1','2'):
                 print('已取消，未修改文件 / Cancelled without changes');return None
             existing={'1':'replace','2':'keep-both'}[answer]
-        if existing not in ('replace','keep-both'):raise ValueError('Invalid existing-version policy')
+        if existing not in ('replace','keep-both'):raise ValueError('旧版处理选项无效 / Invalid existing-version policy')
         if existing=='keep-both':
             revision=hashlib.sha256(payload['spritesheet.webp']).hexdigest()[:8]
             manifest['id']=f'yuexinmiao-selected-{revision}'
-            manifest['displayName']+=f'（独立副本 {revision}）'
+            manifest['displayName']+=f'（独立副本 / Separate copy {revision}）'
             payload['pet.json']=(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode()
             target=pets/manifest['id']
-            if target.is_symlink():raise ValueError('Refusing to replace a symlink')
+            if target.is_symlink():raise ValueError('拒绝覆盖符号链接 / Refusing to replace a symlink')
             if same(target):
                 print(f'Already installed / 已有同一独立副本: {target}');return target
             if target.exists():raise ValueError(f'独立副本目录已存在且内容不同，未覆盖 / Conflicting copy: {target}')
@@ -59,13 +59,13 @@ def install(home,existing=None):
         if staged.exists():shutil.rmtree(staged)
     print(f'Installed / 已安装: {target}')
     if backup:print(f'Previous version backed up / 旧版已移出宠物列表并备份: {backup}')
-    print(f"在 Codex 中选择 / Select: {manifest['displayName']}. Existing selection is unchanged.")
+    print(f"在 Codex 中选择 / Select: {manifest['displayName']}；当前选中项未改变 / Existing selection is unchanged.")
     return target
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser()
-    p.add_argument('--codex-home',type=Path,default=Path(os.environ.get('CODEX_HOME',Path.home()/'.codex')))
-    p.add_argument('--existing',choices=['replace','keep-both'],help='Apply only after the user chooses how to handle an existing different version.')
+    p=argparse.ArgumentParser(description='安装月薪喵 Codex Pet / Install Yuexinmiao Codex Pet')
+    p.add_argument('--codex-home',type=Path,default=Path(os.environ.get('CODEX_HOME',Path.home()/'.codex')),help='Codex 数据目录 / Codex data directory')
+    p.add_argument('--existing',choices=['replace','keep-both'],help='用户确认旧版处理方式后使用 / Apply after the user chooses how to handle an existing version.')
     a=p.parse_args()
     try:install(a.codex_home.expanduser().resolve(),a.existing)
     except (ValueError,OSError) as error:p.exit(1,f'{error}\n')

@@ -24,6 +24,12 @@
 
 Both atlases use `spriteVersionNumber: 1`. See the [v1.1.0 release notes](docs/RELEASE-v1.1.0.md) for validation and upgrade details.
 
+### 同版本修订 · Same-version refresh — 2026-09-26
+
+v1.1.0 与 v1.0.0 的同名安装包同步双语文案、配置描述、安装提示、校验值和维护说明。整理历史 QA，清理工程比较文案。两个版本原有图集与动作均保留，不新增版本。
+
+The existing v1.1.0 and v1.0.0 installation archives receive synchronized bilingual documentation, manifest descriptions, installer messages, checksums, and maintenance guidance. Historical QA is separated and engineering comparisons removed. Both versions retain their original atlases and animations; no new version is created.
+
 ## 1.0.0
 
 首次公开发布，包含九种动画状态、安装器、预览和检查记录。

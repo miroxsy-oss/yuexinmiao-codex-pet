@@ -35,7 +35,7 @@ The desktop package passed 44 checks; Work atlas validation reported no errors o
 - 完整安装包 / Full installation package: `yuexinmiao-codex-pet-v1.1.0.zip`，含桌面安装器、两版图集、预览与说明。 / Includes the desktop installer, both atlases, previews, and instructions.
 - 仅 Work / Work only: `yuexinmiao-work-fanning-v1.1.0.webp`，通过 ChatGPT 官方宠物上传入口上传并选中。 / Upload through ChatGPT’s official pet uploader and select it.
 - 校验值 / Checksums: `SHA256SUMS.txt`。
-- 最新中英对照文档 / Updated bilingual documentation: [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme) · [安装与更新 / Installation and updates](https://github.com/miroxsy-oss/yuexinmiao-codex-pet/blob/main/docs/INSTALL.md)。已发布安装包保持原样，文档修订以仓库为准。 / Published installation archives remain unchanged; see the repository for documentation corrections.
+- 最新中英对照文档 / Updated bilingual documentation: [README](https://github.com/miroxsy-oss/yuexinmiao-codex-pet#readme) · [安装与更新 / Installation and updates](https://github.com/miroxsy-oss/yuexinmiao-codex-pet/blob/main/docs/INSTALL.md)。本附件已同步中英修订；见下方同版本替换说明。 / This asset includes the bilingual refresh; see the same-version replacement note below.
 
 更新时先验证新版，再按用户选择处理旧条目，并保留本机备份。本机安装不会自动更新手机账号中的宠物。
 
@@ -47,6 +47,20 @@ Validate the new version before handling older entries according to the user’s
 
 The backward-compatible Work edition and installer update options warrant the minor-version change from v1.0.0 to v1.1.0. Both editions retain `spriteVersionNumber: 1`, which identifies the atlas format, not the project release.
 
-个人非商业使用，非官方项目。第三方权利与素材来源见仓库 LICENSE.md 和 docs/ATTRIBUTION.md。
+个人非商业使用，非官方项目。第三方权利与素材权利说明见仓库 LICENSE.md 和 docs/ATTRIBUTION.md。
 
-Personal, noncommercial use; an unofficial project. See the repository’s LICENSE.md and docs/ATTRIBUTION.md for third-party rights and asset sources.
+Personal, noncommercial use; an unofficial project. See the repository’s LICENSE.md and docs/ATTRIBUTION.md for third-party rights and artwork rights.
+
+## 同版本附件修订 · Same-version asset refresh
+
+2026-09-26：替换本版本安装包，同步中英说明、配置描述、安装提示和校验值，清理不必要的工程比较文案。项目版本号不变，原图集、动作、帧数和画风不变。已安装用户无需为本次文案修订重新上传 Work 宠物。
+
+September 26, 2026: the package for this version was replaced to synchronize bilingual documentation, manifest descriptions, installer messages, and checksums, and to remove unnecessary engineering comparisons. The release version, original atlas, animations, frame counts, and visual style are unchanged. Existing users do not need to reupload their Work pet for this documentation refresh.
+
+请下载上方列出的专用安装 ZIP 并按本页 SHA256SUMS.txt 校验。同名附件的校验值已变化，旧下载仍可使用原有素材。
+
+Download the named installation ZIP listed above and verify it against this release's SHA256SUMS.txt. The replacement archive has a new checksum; older downloads retain their original artwork.
+
+本次为经维护者确认的同版本替换，发布标签同步指向本次修订提交，使专用 ZIP 与自动 Source code 归档都包含修订文案。旧提交保留在 Git 历史中。
+
+This maintainer-approved same-version replacement also updates the release tag to the revised commit, so both the named ZIP and automatic Source code archives include the refreshed documentation. Earlier commits remain in Git history.
