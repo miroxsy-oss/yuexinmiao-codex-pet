@@ -1,5 +1,7 @@
 # 月薪喵 · Yuexinmiao Codex Pet
 
+![月薪喵项目宣传图 · Yuexinmiao launch poster](docs/images/launch-poster.png)
+
 **[下载 v1.1.0 · Download](https://github.com/miroxsy-oss/yuexinmiao-codex-pet/releases/tag/v1.1.0)** · [本次更新 / Release notes](docs/RELEASE-v1.1.0.md)
 
 **让月薪喵陪你写代码，也陪你摸会儿鱼。**<br>
@@ -216,15 +218,6 @@ If you enjoy this little companion, or it saves you time generating, selecting, 
 更新时的旧版处理与 iPhone 镜像验收流程见 [安装指南](docs/INSTALL.md)。Work 新版验证后，由用户选择清理旧条目或保留；本机备份始终保留。
 
 See the [installation guide](docs/INSTALL.md) for older-version handling and iPhone Mirroring verification. After validating the new Work entry, the user chooses whether to remove or retain older entries; local backups are retained.
-
-## 项目宣传图 · Project poster
-
-<details>
-<summary>展开宣传图 · View the poster</summary>
-
-![月薪喵项目宣传图 · Yuexinmiao launch poster](docs/images/launch-poster.png)
-
-</details>
 
 [参与维护 · Contributing](CONTRIBUTING.md) · [安全与反馈 · Security](SECURITY.md) · [图集规格 · Atlas contract](docs/REFERENCE.md) · [当前与历史检查 · Validation scope](qa/README.md)
 
