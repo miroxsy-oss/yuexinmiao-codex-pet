@@ -4,13 +4,15 @@
 
 # 官方公开要求审计 · Public official requirements audit
 
-核验日期 / Checked: 2026-09-25。对象 / Package: 月薪喵 Codex Pet。
-本次范围为技术兼容性；不评价再分发许可。No redistribution-permission assessment in this technical audit.
+核验日期 / Checked: 2026-09-25。对象 / Package: 月薪喵 · Yuexinmiao Codex Pet。
+本次范围为技术兼容性；不评价再分发许可。This audit covers technical compatibility, not redistribution permission.
 
 ## 公开依据 · Public sources
 
-1. [OpenAI — Pets](https://learn.chatgpt.com/docs/pets)，特别是 Upload a custom pet、Understand pet status、Create a custom pet。
-2. [OpenAI — Commands / Pets](https://learn.chatgpt.com/docs/reference/commands#pets)，安装链接的 `spriteVersionNumber` 参数。
+1. [OpenAI — Pets](https://learn.chatgpt.com/docs/pets)，特别是上传自定义宠物、理解宠物状态、创建自定义宠物章节。<br>
+   See the Upload a custom pet, Understand pet status, and Create a custom pet sections.
+2. [OpenAI — Commands / Pets](https://learn.chatgpt.com/docs/reference/commands#pets)，安装链接的 `spriteVersionNumber` 参数。<br>
+   See the `spriteVersionNumber` parameter in installation links.
 
 两篇均已实际打开核对。Both pages were opened and checked.
 
@@ -21,7 +23,7 @@
 |Pets|PNG 或 WebP / PNG or WebP|WebP|通过 / Pass|
 |Pets|透明 / Transparent|RGBA，Alpha 0–255|通过 / Pass|
 |Pets|1536×1872|1536×1872|通过 / Pass|
-|Pets|≤20 MiB|498198 bytes，约 0.475 MiB|通过 / Pass|
+|Pets|≤20 MiB|498198 bytes，约 / approximately 0.475 MiB|通过 / Pass|
 |Commands|版本参数支持 1 或 2，默认 1 / Versions 1 and 2; default 1|spriteVersionNumber=1|支持 / Supported|
 
 **结论：满足这两篇文档中可核验的适用格式要求。v1 是官方明确支持的版本，缺少 v2 视线帧不是 v1 不合格。**
@@ -30,14 +32,20 @@
 
 ## 额外工程核查 · Additional engineering checks
 
-以下为本机程序、验证脚本和实际使用证据，不冒充公开文档逐条规定：
+以下为本机程序、验证脚本和实际使用证据，不冒充公开文档逐条规定：<br>
+These findings come from the local application, validation scripts, and observed usage; they are not additional rules stated in the public documentation.
 
-- 安装文件与发布文件逐字节一致，SHA256：`5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431`。
-- 本地 atlas 验证脚本复跑：0 错误、0 警告；独立包检查 44 项通过。
-- 9 行、57 有效帧位、15 透明空格，符合已安装应用的 v1 行定义。
-- 网页账号上传、激活与刷新保持已验证；手机处理动画已观察，未完成九状态实机全覆盖。
+- 安装文件与发布文件逐字节一致，SHA256：`5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431`。<br>
+  Installed and packaged files are byte-identical. SHA-256: `5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431`.
 
-These are engineering findings, not additional published rules: installed and packaged files are byte-identical; the atlas validator reports zero errors/warnings; 44 package checks pass; nine rows, 57 active slots and 15 empty slots match the installed app. Web upload/selection persistence and mobile processing animation were observed. Full nine-state device testing is incomplete.
+- 本地 atlas 验证脚本复跑：0 错误、0 警告；独立包检查 44 项通过。<br>
+  The rerun local atlas validator reported 0 errors and 0 warnings; all 44 independent package checks passed.
+
+- 9 行、57 有效帧位、15 透明空格，符合已安装应用的 v1 行定义。<br>
+  Nine rows, 57 active frame slots, and 15 transparent unused cells match the installed app’s v1 row definitions.
+
+- 网页账号上传、激活与刷新保持已验证；手机处理动画已观察，未完成九状态实机全覆盖。<br>
+  Account upload, activation, and persistence after web reload were verified; mobile processing animation was observed, but all nine states have not been tested on devices.
 
 ## 不能混用的标准 · Separate standards
 
@@ -47,7 +55,7 @@ The local hatch-pet v2 workflow and WenNinghan community specifications are prod
 
 本次查阅的官方文章未规定宠物必须全身、不能有电脑道具、每个动作必须写实，也未承诺悬停持续跳舞或动作必须持续到气泡消失。因此，已选扇风动作、半身造型和道具不能据此直接判为违反官方公开要求。它们与本地创作建议的差异仍可记录为设计取舍。
 
-The reviewed articles do not mandate full-body art, prohibit computer props, prescribe literal motions, or promise continuous hover/task animation. These design choices therefore cannot be declared violations on the basis of those articles alone.
+The reviewed articles do not mandate full-body art, prohibit computer props, prescribe literal motions, or promise continuous hover/task animation. These design choices therefore cannot be declared violations on the basis of those articles alone. Differences from local production guidance can still be documented as design tradeoffs.
 
 ## 功能体验的独立结论 · Separate experience finding
 

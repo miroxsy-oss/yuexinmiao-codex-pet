@@ -24,19 +24,23 @@ Tests execute the playback function and frame definitions extracted from the ins
 
 ## 实机与素材核对 · Live and asset checks
 
-- 桌面截图直接观察到“正在运行命令”提示与第 0 行抱鱼待机同时出现，与播放器规则一致。
-- 2026-09-25 通过 iPhone 镜像复测：纯思考、联网搜索与 Python 计算的处理阶段，采样均显示挠头看电脑（review）动作及帧变化。先前“打字动画”的描述不准确，现予更正；未验证手机是否采用桌面三遍后待机规则。
-- 九种状态的图集映射已核对；未把独立函数测试或离线预览当成九状态实机触发全部通过。
-- 桌面状态映射中思考与执行命令共用 `running`，没有独立 thinking 图集行；不可把该桌面映射推广到手机。
-- 左右移动、打招呼、点击动作属于交互动画，不等同于任务处理状态。
-- `jumping` 按用户明确选择使用捂鼻扇风；这是有意的语义替换，不是标准跳跃动作。
+- 桌面截图直接观察到“正在运行命令”提示与第 0 行抱鱼待机同时出现，与播放器规则一致。<br>
+  Desktop capture shows “Running command” alongside the row-0 fish-holding pose, consistent with the player rule.
 
-- Desktop capture shows “Running command” alongside the row-0 fish-holding pose, consistent with the player rule.
-- On-device retesting on 2026-09-25 showed the animated review/head-scratching pose during reasoning, web search, and sampled Python-task processing. The earlier typing description is corrected; mobile fallback timing remains unverified.
-- All atlas mappings were checked. Function tests and offline previews are not proof that every state was triggered on a real device.
-- In the desktop mapping, thinking and command execution share `running`; there is no separate thinking row. This does not establish the mobile mapping.
-- Directional movement, greeting, and click reactions are interaction animations rather than task status indicators.
-- The user intentionally chose nose-covering/fanning for `jumping`; this is not a literal jump.
+- 2026-09-25 通过 iPhone 镜像复测：纯思考、联网搜索与 Python 计算的处理阶段，采样均显示挠头看电脑（review）动作及帧变化。先前“打字动画”的描述不准确，现予更正；未验证手机是否采用桌面三遍后待机规则。<br>
+  On-device retesting on 2026-09-25 showed the animated review/head-scratching pose during reasoning, web search, and sampled Python-task processing. The earlier typing description is corrected; mobile fallback timing remains unverified.
+
+- 九种状态的图集映射已核对；未把独立函数测试或离线预览当成九状态实机触发全部通过。<br>
+  All atlas mappings were checked. Function tests and offline previews are not proof that every state was triggered on a real device.
+
+- 桌面状态映射中思考与执行命令共用 `running`，没有独立 thinking 图集行；不可把该桌面映射推广到手机。<br>
+  In the desktop mapping, thinking and command execution share `running`; there is no separate thinking row. This does not establish the mobile mapping.
+
+- 左右移动、打招呼、点击动作属于交互动画，不等同于任务处理状态。<br>
+  Directional movement, greeting, and click reactions are interaction animations rather than task status indicators.
+
+- `jumping` 按用户明确选择使用捂鼻扇风；这是有意的语义替换，不是标准跳跃动作。<br>
+  The user intentionally chose nose-covering/fanning for `jumping`; this is not a literal jump.
 
 ## 修复边界 · Fix boundary
 
