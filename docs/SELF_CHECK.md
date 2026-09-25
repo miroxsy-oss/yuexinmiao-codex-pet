@@ -40,3 +40,47 @@
 `qa/package-check.json` 为随包脚本独立复核结果。`qa/reproducibility.json` 记录本环境的逐字节重建结果。编码器版本变化可能导致压缩字节不同，图像像素一致仍是重建的关键检查。
 
 此处检查针对已安装文件与重放动画，未抓取当前桌面实时运行画面，也不包含 v2 的额外 16 向视线帧。
+
+---
+
+## Historical v1.0.0 self-check — English
+
+**Update:** The Chinese report above and this translation describe v1.0.0. Idle/greeting light fringes have since been corrected. Current hashes are in `CHECKSUMS.sha256`; see [outline repairs](OUTLINE_FIX.md) for scope and comparisons.
+
+Date: September 25, 2026. Subject: Yuexinmiao Codex Pet. The installed atlas’s historical SHA-256 was `5a008b5e7bebfe222c36994ebbd1c724f3be98aa11bd35d72155cabaafb33431`.
+
+### Conclusion
+
+The technical structure passed the package’s v1 atlas/report checks while retaining user-selected visual characteristics and exceptions to state semantics. Permission to publicly redistribute every asset has not been fully verified.
+
+| Check | Result |
+| --- | --- |
+| 1536×1872 / 8×9 / 192×208 | Passed |
+| WebP, RGBA, 57 active slots | Passed |
+| Required frame counts in nine rows; 15 transparent unused cells | Passed |
+| Nonzero RGB in fully transparent pixels | 0 |
+| hatch-pet inspect_frames | 0 errors / 0 warnings |
+| hatch-pet validate_atlas on installed file | 0 errors / 0 warnings |
+| Independent package and rebuild checks | 44 passed |
+| Rebuild from approved source frames | Pixel-identical and byte-identical WebP |
+| Visual review of all frames on black and white | Completed; known characteristics below |
+| Nine GIF rows and browser animation | Checked |
+| Public redistribution permission | Not fully confirmed |
+
+### Retained visual characteristics in v1.0.0
+
+- Idle and greeting had thin, upstream white fringes on dark backgrounds. This is historical and was corrected in v1.1.0.
+- Greeting uses a partial-body composition with a horizontal lower edge, not accidental cell cropping.
+- Left/right movement retains some original motion marks; working retains its rectangular desk.
+- The jumping slot deliberately plays nose-covering and fanning rather than a jump/landing sequence.
+- Some animations repeat frames, while frame slots follow the application specification. GIF encoders may merge identical frames and accumulate their durations.
+
+Each cell contains one cat. Within the accepted props, motion marks, and partial-body compositions, no empty active frames, cell overlap, new clipping, or frame-to-frame scale jumps were found. Differences in drawing style between sources remain.
+
+### Reproduction and evidence limits
+
+`qa/frame-review.json` and `qa/installed-validation.json` were produced by local hatch-pet scripts using default parameters.
+
+`qa/package-check.json` contains the bundled independent checks. `qa/reproducibility.json` records byte-identical rebuilding in the tested environment. Encoder-version changes may alter compressed bytes; identical decoded pixels remain the key reproduction check.
+
+This historical review examined installed files and replayed animation, not a capture of the live desktop application. It does not include v2’s additional 16-direction gaze frames.

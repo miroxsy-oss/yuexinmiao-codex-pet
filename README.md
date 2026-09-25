@@ -1,10 +1,10 @@
-# 月薪喵桌面宠物 · Yuexinmiao Codex Pet
+# 月薪喵 · Yuexinmiao Codex Pet
 
 **[下载 v1.1.0 · Download](https://github.com/miroxsy-oss/yuexinmiao-codex-pet/releases/tag/v1.1.0)** · [本次更新 / Release notes](docs/RELEASE-v1.1.0.md)
 
-![月薪喵项目发布宣传图：让可爱的陪伴跑在代码里](docs/images/launch-poster.png)
+![月薪喵项目宣传图 · Yuexinmiao launch poster](docs/images/launch-poster.png)
 
-**让月薪喵陪你写代码，也陪你摸会儿鱼。**  
+**让月薪喵陪你写代码，也陪你摸会儿鱼。**<br>
 **A little desktop companion for coding sessions and well-earned breaks.**
 
 为 **Codex 桌面应用**适配的动态宠物，提供 9 种动作状态，并附手机 **ChatGPT Work 捂鼻扇风专用版**。直接使用现成动画，无需重新生成图片。
@@ -15,14 +15,14 @@ An animated pet for the **Codex desktop app**, with nine animation states and a 
 
 Collected from online sources, with animation sequencing, sizing, testing, packaging, and maintenance by **[@miroxsy-oss](https://github.com/miroxsy-oss)**.
 
-**个人使用 · 非商业用途 · 非官方项目**  
+**个人使用 · 非商业用途 · 非官方项目**<br>
 **Personal use · Noncommercial · Unofficial project**
 
 ## 实际使用效果 · In use
 
 | Codex 桌面浮窗 · Desktop | iPhone Work 任务内 · Mobile |
 | :---: | :---: |
-| ![桌面实机局部：月薪喵捂鼻扇风与聊天控件](docs/images/desktop-pet-live.png) | ![iPhone Work 实机局部：计算完成记录与搜索中的捂鼻扇风宠物](docs/images/mobile-work-live.png) |
+| ![桌面实机局部 · Desktop pet in use](docs/images/desktop-pet-live.png) | ![iPhone Work 实机局部 · Mobile Work pet in use](docs/images/mobile-work-live.png) |
 
 桌面图取自实际使用截图，保留宠物与聊天控件；手机图取自本次 iPhone 镜像验收，仅保留工具状态与宠物。均已裁去个人信息和无关界面。桌面是可浮动宠物，手机是在 Work 任务状态旁显示的迷你动画。
 
@@ -67,13 +67,13 @@ Give Codex the repository link and ask:
 
 > Install the Yuexinmiao Codex Pet from this repository. Keep my existing pet and use the ready-made assets.
 
-仓库提供 [安装技能](skills/install-yuexinmiao/SKILL.md)，供代理读取后复用安装流程。  
+仓库提供 [安装技能](skills/install-yuexinmiao/SKILL.md)，供代理读取后复用安装流程。<br>
 An [installation skill](skills/install-yuexinmiao/SKILL.md) is included so agents can follow the existing installation workflow.
 
 <details>
 <summary>手动安装与路径 · Manual installation and paths</summary>
 
-将 `dist/yuexinmiao-selected/` 文件夹复制到下列目录。  
+将 `dist/yuexinmiao-selected/` 文件夹复制到下列目录。<br>
 Copy the `dist/yuexinmiao-selected/` folder into the appropriate directory below.
 
 | 系统 · Platform | 默认目录 · Default directory |
@@ -102,7 +102,7 @@ The internal folder name remains `yuexinmiao-selected`; the display name is 「�
 | 本机 Codex · Desktop | `dist/yuexinmiao-selected/` | 保留九种动作，由桌面应用触发 · Nine animations, triggered by the desktop app |
 | 手机／网页 Work · Mobile / web | `dist/yuexinmiao-work-fanning/spritesheet.webp` | 手机已测试的处理中场景播放捂鼻扇风 · Fanning during tested mobile processing stages |
 
-![Work 专用版捂鼻扇风动画预览](previews/animations/v1.1.0/work-fanning.gif)
+![Work 捂鼻扇风 · Work fanning preview](previews/animations/v1.1.0/work-fanning.gif)
 
 *素材循环预览，播放速度不代表手机实际帧率。 / Artwork loop preview; timing is not a measurement of the mobile player.*
 
@@ -112,7 +112,7 @@ The internal folder name remains `yuexinmiao-selected`; the display name is 「�
 
 **相比 v1.0.0：手机 Work 从「挠头思考」改为经典「捂鼻扇风」。** 由于目前在已测试的处理中场景只观察到同一组动画，未见其他动作切换，v1.1.0 的 Work 专用版选择更有辨识度、更能代表月薪喵的招牌动作，替换手机当前调用的动画槽位。完全复用已确认的原始帧，不重绘角色，本机 Codex 九种动作保持不变。新版已在手机的 Python 处理和联网搜索阶段实测播放，并采集到不同动作帧：
 
-![iPhone Work 实测：捂鼻扇风的连续采样画面，已裁去个人界面信息](docs/images/mobile-work-motion.png)
+![iPhone Work 捂鼻扇风采样 · Cropped mobile fanning samples](docs/images/mobile-work-motion.png)
 
 **这不等于“手机官方只支持一种状态”。** 目前只确认上述场景的表现；等待授权、失败等其他状态是否会触发不同动作，仍需后续实测或官方说明确认。这里的“常驻动作”仅指宠物出现时使用这组动作，不代表任务完成后仍常驻屏幕。动作播放与隐藏由 Work 控制。
 
@@ -146,7 +146,7 @@ The Work atlas is account-level and also applies on the web; the local nine-stat
 | `running` | 边吃零食边敲键盘 · Snacking while typing |
 | `review` | 电脑前挠头审阅 · Scratching the head at the computer |
 
-`jumping` 是应用的状态名称，本项目为它配置了捂鼻扇风动作。  
+`jumping` 是应用的状态名称，本项目为它配置了捂鼻扇风动作。<br>
 `jumping` is the app's state name; this pet uses the nose-covering and fanning gesture for that state.
 
 ## 检查与兼容性 · Validation and compatibility
@@ -156,7 +156,7 @@ The Work atlas is account-level and also applies on the web; the local nine-stat
 Version 1 is explicitly supported by the official install documentation. Local v2 creation guidance does not invalidate v1 compatibility.
 
 
-采用 Codex 自定义宠物 v1 格式：9 种状态、57 个有效帧位、透明 WebP 图集。  
+采用 Codex 自定义宠物 v1 格式：9 种状态、57 个有效帧位、透明 WebP 图集。<br>
 Uses the Codex custom-pet v1 format: nine states, 57 active frame slots, and a transparent WebP atlas.
 
 | 检查项 · Check | 结果 · Result |
@@ -166,9 +166,9 @@ Uses the Codex custom-pet v1 format: nine states, 57 active frame slots, and a t
 | 独立包检查 · Independent package checks | 44 项通过 · 44 checks passed |
 | 源帧重建 · Rebuild from source frames | 与已验证图集逐字节一致 · Byte-identical to the validated atlas |
 
-仓库附带自动检查配置、黑白底预览与完整检查记录。已修正待机和打招呼动作的外轮廓白边；打招呼仍保留原素材的半身造型，详见 [自检报告（中文）](docs/SELF_CHECK.md)。
+仓库附带自动检查配置、黑白底预览与完整检查记录。已修正待机和打招呼动作的外轮廓白边；打招呼仍保留原素材的半身造型，详见 [自检报告](docs/SELF_CHECK.md)。
 
-The repository includes automated checks, previews on black and white backgrounds, and validation records. Exterior light fringes in idle and greeting have been corrected; the greeting retains its original partial-body composition. See the [validation report (Chinese)](docs/SELF_CHECK.md) for details.
+The repository includes automated checks, previews on black and white backgrounds, and validation records. Exterior light fringes in idle and greeting have been corrected; the greeting retains its original partial-body composition. See the [validation report](docs/SELF_CHECK.md) for details.
 
 适用于支持自定义宠物的 **Codex 桌面应用**；同一图集也已通过 ChatGPT 网页官方上传入口用于 Work。手机使用路径与验证边界见上方教程。本项目不是独立桌宠程序或通用 App 皮肤。
 
@@ -209,8 +209,8 @@ Approved source frames are in `source/frames/`, animation mappings are in `sourc
 
 For personal, noncommercial use only. Contributions that the maintainer has the right to license may not be sold, distributed for a fee, or used in commercial promotions or products. Third-party asset use and redistribution remain subject to the relevant rights holders' permissions; permission to publicly redistribute the complete asset package has not yet been confirmed.
 
-详细说明见 [使用条款（中文）](LICENSE.md) 与 [素材来源及致谢（中文）](docs/ATTRIBUTION.md)。  
-See the [usage terms (Chinese)](LICENSE.md) and [asset attribution (Chinese)](docs/ATTRIBUTION.md) for details.
+详细说明见 [使用条款](LICENSE.md) 与 [素材来源及致谢](docs/ATTRIBUTION.md)。<br>
+See the [usage terms](LICENSE.md) and [asset attribution](docs/ATTRIBUTION.md) for details.
 
 ## 支持这个项目 · Support the project
 
@@ -220,7 +220,9 @@ If you enjoy this little companion, or it saves you time generating, selecting, 
 
 ---
 
-**桌面宠物 · Codex 自定义宠物 · 桌面美化**  
+**桌面宠物 · Codex 自定义宠物 · 桌面美化**<br>
 **Codex Pet · Codex Custom Pet · Desktop Customization · Yuexinmiao**
 
 更新时的旧版处理与 iPhone 镜像验收流程见 [安装指南](docs/INSTALL.md)。Work 新版验证后，由用户选择清理旧条目或保留；本机备份始终保留。
+
+See the [installation guide](docs/INSTALL.md) for older-version handling and iPhone Mirroring verification. After validating the new Work entry, the user chooses whether to remove or retain older entries; local backups are retained.
