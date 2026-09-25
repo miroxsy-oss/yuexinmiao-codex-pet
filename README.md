@@ -20,14 +20,27 @@ Collected from online sources, with animation sequencing, sizing, testing, packa
 
 ## 使用效果预览 · In-use preview
 
-| Codex 桌面浮窗 · Desktop overlay | iPhone Work 任务内 · In-task pet |
-| :---: | :---: |
-| <img src="previews/animations/v1.1.0/desktop-idle.gif" width="160" alt="摸鱼待机动图 · Animated desktop idle"> | <img src="previews/animations/v1.1.0/work-mini.gif" width="64" alt="迷你捂鼻扇风动图 · Miniature Work fanning animation"> |
-| **摸鱼待机 · Relaxing while idle** | **捂鼻扇风 · Nose-covering and fanning** |
-| 空闲时的默认动作 · Default idle animation | 已测试任务处理中的动作 · Animation observed during tested task processing |
+<table>
+<thead>
+<tr>
+<th width="50%" align="center">Codex 桌面浮窗 · Desktop overlay</th>
+<th width="50%" align="center">iPhone Work 任务内 · In-task pet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="previews/animations/v1.1.0/desktop-idle.gif" width="160" alt="摸鱼待机动图 · Animated desktop idle"></td>
+<td align="center"><img src="previews/animations/v1.1.0/work-mini.gif" width="64" alt="迷你捂鼻扇风动图 · Miniature Work fanning animation"></td>
+</tr>
+<tr>
+<td align="center"><strong>摸鱼待机 · Relaxing while idle</strong></td>
+<td align="center"><strong>处理中捂鼻扇风 · Fanning during processing</strong></td>
+</tr>
+</tbody>
+</table>
 
-两栏复用原始动画素材：桌面按已测试播放器的待机节奏循环，Work 缩小展示任务旁的迷你形象。这是动作预览，不是屏幕录像；手机实际大小、速度和显示时机由 Work 控制。<br>
-Both previews reuse the existing artwork: desktop follows the tested idle playback timing, while Work shows a miniature task-side pet. These are animation previews, not screen recordings; Work controls the actual mobile size, speed, and visibility.
+原始素材动图预览，非屏幕录像。桌面采用已测试的待机节奏；手机实际尺寸与播放由 Work 控制。<br>
+Animated artwork previews, not screen recordings. Desktop uses the tested idle timing; Work controls actual mobile size and playback.
 
 ## 桌面九种动作 · Nine desktop animations
 
