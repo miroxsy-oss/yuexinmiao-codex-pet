@@ -18,7 +18,7 @@ Five lossless WebP encoding variants were pixel-identical; the existing 498198-b
 
 以 [官方公开要求审计](OFFICIAL_AUDIT.md) 为技术兼容性结论。下表 v2 与动作语义为本地制作流程的对照，不是官方公开的 v1 上传门槛；没有 v2 视线帧不能判为 v1 不合格。
 
-Use the [public-requirements audit](OFFICIAL_AUDIT.md) for compatibility. The v2/style comparisons below concern local production guidance, not public v1 upload requirements.
+Use the [public-requirements audit](OFFICIAL_AUDIT.md) for compatibility. The v2/style comparisons below concern local production guidance, not public v1 upload requirements. Missing v2 gaze frames does not invalidate a v1 atlas.
 
 ## 分项结论 · Decisions
 
@@ -40,6 +40,5 @@ This is an unofficial custom pet compatible with the supported v1 format, not an
 
 Defer public release of the complete artwork package until permissions are established. A separate repository containing only tools and workflow material you have the right to publish is an alternative, excluding third-party artwork, source frames, and previews; it would not be a ready-to-use full pet package. No GitHub repository was created or uploaded.
 
-参考 / References: [Official Pets](https://learn.chatgpt.com/docs/pets), [GitHub licensing](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). v2 创作检查依据本机 hatch-pet 技能；它的创作规则不等于旧版 v1 文件不受应用支持。
-
+参考 / References: [Official Pets](https://learn.chatgpt.com/docs/pets), [GitHub licensing](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). v2 创作检查依据本机 hatch-pet 技能；它的创作规则不等于旧版 v1 文件不受应用支持。<br>
 The v2 creation checks refer to the local hatch-pet skill. Its production rules do not imply that the application rejects older v1 files.

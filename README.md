@@ -38,8 +38,8 @@ Download and open the preview in a browser to compare 32–192 px sizes, light/d
 | 摸鱼待机 · Idle | 向右移动 · Move right | 向左移动 · Move left |
 | :---: | :---: | :---: |
 | ![摸鱼待机 / Idle](previews/animations/v1.1.0/idle.gif) | ![向右移动 / Move right](previews/animations/v1.1.0/running-right.gif) | ![向左移动 / Move left](previews/animations/v1.1.0/running-left.gif) |
-| **打招呼 · Greeting** | **捂鼻扇风 · Nose-covering gesture** | **抱头崩溃 · Error reaction** |
-| ![打招呼 / Greeting](previews/animations/v1.1.0/waving.gif) | ![捂鼻扇风 / Nose-covering gesture](previews/animations/v1.1.0/jumping.gif) | ![失败反馈 / Error reaction](previews/animations/v1.1.0/failed.gif) |
+| **打招呼 · Greeting** | **捂鼻扇风 · Nose-covering and fanning** | **抱头崩溃 · Error reaction** |
+| ![打招呼 / Greeting](previews/animations/v1.1.0/waving.gif) | ![捂鼻扇风 / Nose-covering and fanning](previews/animations/v1.1.0/jumping.gif) | ![失败反馈 / Error reaction](previews/animations/v1.1.0/failed.gif) |
 | **等你回来 · Waiting** | **正在工作 · Working** | **看看结果 · Review** |
 | ![等待 / Waiting](previews/animations/v1.1.0/waiting.gif) | ![工作 / Working](previews/animations/v1.1.0/running.gif) | ![审阅 / Review](previews/animations/v1.1.0/review.gif) |
 
@@ -59,12 +59,11 @@ On macOS, use `python3` if `python` is unavailable. The installer verifies file 
 
 ### 让 Codex 帮你安装 · Ask Codex to install it
 
-把本仓库链接发给 Codex，并告诉它：
-
-> 请安装这个仓库里的「月薪喵 Codex Pet」，保留我原来的宠物，直接使用现成素材。
-
+把本仓库链接发给 Codex，并告诉它：<br>
 Give Codex the repository link and ask:
 
+> 请安装这个仓库里的「月薪喵 Codex Pet」，保留我原来的宠物，直接使用现成素材。
+>
 > Install the Yuexinmiao Codex Pet from this repository. Keep my existing pet and use the ready-made assets.
 
 仓库提供 [安装技能](skills/install-yuexinmiao/SKILL.md)，供代理读取后复用安装流程。<br>
@@ -108,17 +107,16 @@ The internal folder name remains `yuexinmiao-selected`; the display name is 「�
 
 ### 手机实际会显示什么？ · What appears on mobile?
 
-2026-09-26 通过 **iPhone 镜像实机测试**：原九状态图集在思考、联网搜索和 Python 计算处理中只观察到挠头看电脑这一组动画。临时切换官方默认 Codex 宠物进行对照，在这些场景下同样未观察到明显的动作组切换；任务完成后，处理中宠物图标消失。
+2026-09-26 通过 **iPhone 镜像实机测试**：原九状态图集在思考、联网搜索和 Python 计算处理中只观察到挠头看电脑这一组动画。临时切换官方默认 Codex 宠物进行对照，在这些场景下同样未观察到明显的动作组切换；任务完成后，处理中宠物图标消失。<br>
+On-device tests through iPhone Mirroring on September 26, 2026 observed the same head-scratching animation during reasoning, web search, and Python-task processing with the original atlas. The official default Codex pet also showed no clear animation-group switch in those tested scenarios. The processing icon disappeared after completion.
 
-**相比 v1.0.0：手机 Work 从「挠头思考」改为经典「捂鼻扇风」。** 由于目前在已测试的处理中场景只观察到同一组动画，未见其他动作切换，v1.1.0 的 Work 专用版选择更有辨识度、更能代表月薪喵的招牌动作，替换手机当前调用的动画槽位。完全复用已确认的原始帧，不重绘角色，本机 Codex 九种动作保持不变。新版已在手机的 Python 处理和联网搜索阶段实测播放，并采集到不同动作帧：
+**相比 v1.0.0：手机 Work 从「挠头思考」改为经典「捂鼻扇风」。** 由于目前在已测试的处理中场景只观察到同一组动画，未见其他动作切换，v1.1.0 的 Work 专用版选择更有辨识度、更能代表月薪喵的招牌动作，替换手机当前调用的动画槽位。完全复用已确认的原始帧，不重绘角色，本机 Codex 九种动作保持不变。新版已在手机的 Python 处理和联网搜索阶段实测播放，并采集到不同动作帧：<br>
+**Compared with v1.0.0, the v1.1.0 Work edition changes head-scratching to the signature nose-covering and fanning gesture.** Because only one animation group was observed across the tested processing scenarios, this edition uses the character’s more recognizable signature gesture in that slot. It reuses approved pixels without redrawing the character and preserves all nine local desktop animations. Python processing and web search were verified on the phone, with distinct motion frames captured.
 
 ![iPhone Work 捂鼻扇风采样 · Cropped mobile fanning samples](docs/images/mobile-work-motion.png)
 
-**这不等于“手机官方只支持一种状态”。** 目前只确认上述场景的表现；等待授权、失败等其他状态是否会触发不同动作，仍需后续实测或官方说明确认。这里的“常驻动作”仅指宠物出现时使用这组动作，不代表任务完成后仍常驻屏幕。动作播放与隐藏由 Work 控制。
-
-On-device tests through iPhone Mirroring on September 26, 2026 observed the same head-scratching animation during reasoning, web search, and Python-task processing with the original atlas. The official default Codex pet also showed no clear animation-group switch in those tested scenarios. The processing icon disappeared after completion.
-
-**Compared with v1.0.0, the v1.1.0 Work edition changes head-scratching to the signature nose-covering and fanning gesture.** Because only one animation group was observed across the tested processing scenarios, this edition uses the character’s more recognizable signature gesture in that slot. It reuses approved pixels without redrawing the character and preserves all nine local desktop animations. Python processing and web search were verified on the phone, with distinct motion frames captured. **This is not a claim that mobile officially supports only one state.** Approval, failure, and other branches remain unverified. Work controls when the icon appears and disappears.
+**这不等于“手机官方只支持一种状态”。** 目前只确认上述场景的表现；等待授权、失败等其他状态是否会触发不同动作，仍需后续实测或官方说明确认。这里的“常驻动作”仅指宠物出现时使用这组动作，不代表任务完成后仍常驻屏幕。动作播放与隐藏由 Work 控制。<br>
+**This is not a claim that mobile officially supports only one state.** Only the scenarios above are confirmed. Approval waits, failures, and other branches require further testing or official confirmation. “Default gesture” here means the animation used while the pet is visible, not an icon that stays on screen after task completion. Work controls when the icon appears and disappears.
 
 ### 怎么使用 · Setup
 
