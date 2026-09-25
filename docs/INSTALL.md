@@ -93,4 +93,11 @@ python3 scripts/install.py --existing keep-both
 
 两条命令二选一。replace 将旧条目移到回滚备份；keep-both 保留旧条目并安装独立副本。安装器只管理本机目录，不能删除 Work 账号条目。历史上使用不同 ID 的手动安装版本，由代理列出并在用户确认后处理，不能按名称模糊匹配批量删除。
 
-Choose one command after the user chooses. Without an interactive terminal or explicit policy, an update stops unchanged. The installer manages local directories only, not account pets. Independently installed legacy IDs must be inventoried and handled with user confirmation; never delete by a fuzzy display-name match.
+Choose one command after the user chooses: `replace` moves the previous entry to a rollback backup; `keep-both` retains it and installs a separate copy. Without an interactive terminal or explicit policy, an update stops unchanged. The installer manages local directories only, not account pets. Independently installed legacy IDs must be inventoried and handled with user confirmation; never delete by a fuzzy display-name match.
+
+
+## 工具使用顺序 · Tool preference
+
+代理优先检查可用 MCP 功能工具，再使用受支持的 API 或 CLI。仅当这些方式不能完成操作，或需要验证实际界面／动画时使用 GUI；手机动画验收仍需真实设备证据。不能因为工具名称不同而假定能力不存在，也不能为追求自动化绕过认证或权限。
+
+Agents should check available MCP capabilities first, then use supported APIs or CLIs. Use GUI control when those routes cannot complete an operation or when actual UI/animation verification is required. Mobile animation acceptance still requires real-device evidence. Different tool names do not prove a capability is absent, and automation must not bypass authentication or permissions.

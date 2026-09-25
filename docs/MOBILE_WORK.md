@@ -1,4 +1,4 @@
-# 手机 Work 显示与验证范围
+# 手机 Work 显示与验证范围 · Mobile Work test scope
 
 2026-09-26，通过真实 iPhone 镜像测试，未用浏览器窄屏模拟。
 
@@ -27,4 +27,30 @@
 
 公开仓库仅含宠物局部截图，不包含个人设置、账号或完整对话截图。当前维护者账号已启用新版并清理旧 Work 条目；下载者需在自己的账号上传、选择和验证。
 
-English: The fanning edition reuses approved pixels in the observed mobile review slot, leaving the local nine-state edition intact. Reasoning/tool-processing samples and the official control do not establish that mobile supports only one state. Other states remain unverified. The upload is account-level, also affecting web Work. Full device screenshots are not included in this public package.
+
+## English
+
+Tested on September 26, 2026 using an actual iPhone through iPhone Mirroring, not a narrow browser simulation.
+
+| Atlas | Reasoning / processing | Web search | After completion |
+| --- | --- | --- | --- |
+| Original nine-state Yuexinmiao | Head-scratching at the computer | Head-scratching at the computer | Status icon hidden |
+| Official default Codex pet (control) | Official animation loop | No clear animation-group switch | Status icon hidden |
+| Work fanning edition | Nose-covering and fanning during Python processing | Nose-covering and fanning | Status icon hidden |
+
+These observations describe sampled behavior, not every instant. Other clients, approval waits, failures, and other branches remain untested. A complete mobile mapping requires further testing or official documentation; this does not establish that mobile officially supports only one state. The [official Pets documentation](https://learn.chatgpt.com/docs/pets) describes display as depending on the surface, without listing a complete iPhone state mapping.
+
+### Why the animation changed from v1.0.0 to v1.1.0
+
+The Work edition replaces v1.0.0’s head-scratching animation with the signature nose-covering and fanning gesture. The tested reasoning, search, and computation stages showed one animation group, so a more recognizable gesture was chosen. Other mobile states remain unverified, and the local Codex edition retains all nine animations.
+
+### What differs in the Work edition
+
+- File: `dist/yuexinmiao-work-fanning/spritesheet.webp`, transparent WebP, 1536×1872, `spriteVersionNumber: 1`.
+- Only zero-based row 8 (`review`) uses the original row 4 fanning artwork. Its five original frames fill six slots as `[0,1,2,2,3,4]`, deliberately repeating the middle frame once.
+- Pixels are reused without redrawing, resizing, or recoloring; the other eight rows remain unchanged. The local installer still installs the nine-state desktop edition.
+- Work selection is account-level and affects web Work too; it is not an iPhone-only override.
+- The chosen gesture plays when the pet is visible. Work controls hiding after task completion; it is not a permanently floating overlay.
+- Mobile settings may synchronize slowly or retain cached artwork. The first test still showed the old pet and was not counted as a pass. Reopening the app and checking personalization settings was followed by verified new motion with distinct frames.
+
+The image above shows four cropped, magnified samples during mobile processing. Public screenshots exclude personal settings, account details, and full conversations. The maintainer’s account has the new entry selected and older Work entries removed; users must upload, select, and verify it in their own accounts.

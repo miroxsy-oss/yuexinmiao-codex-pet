@@ -1,3 +1,7 @@
+> 历史记录：以下为 v1.0.0 审计时的状态、尺寸与校验值，不是当前发布状态。当前变化见 [v1.1.0 发布说明](RELEASE-v1.1.0.md)，手机验证见 [Work 说明](MOBILE_WORK.md)。
+>
+> Historical record: the status, dimensions, and hashes below reflect the v1.0.0 audit, not the current release status. See the [v1.1.0 release notes](RELEASE-v1.1.0.md) and [mobile Work report](MOBILE_WORK.md) for subsequent changes.
+
 # 最终兼容性与发布判断 · Final compatibility and release assessment
 
 ## 本轮优化 · This pass
@@ -37,3 +41,5 @@ This is an unofficial custom pet compatible with the supported v1 format, not an
 Defer public release of the complete artwork package until permissions are established. A separate repository containing only tools and workflow material you have the right to publish is an alternative, excluding third-party artwork, source frames, and previews; it would not be a ready-to-use full pet package. No GitHub repository was created or uploaded.
 
 参考 / References: [Official Pets](https://learn.chatgpt.com/docs/pets), [GitHub licensing](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository). v2 创作检查依据本机 hatch-pet 技能；它的创作规则不等于旧版 v1 文件不受应用支持。
+
+The v2 creation checks refer to the local hatch-pet skill. Its production rules do not imply that the application rejects older v1 files.

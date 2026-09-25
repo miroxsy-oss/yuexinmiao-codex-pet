@@ -1,3 +1,7 @@
+> 历史记录：以下为 v1.0.0 审计时的状态、尺寸与校验值，不是当前发布状态。当前变化见 [v1.1.0 发布说明](RELEASE-v1.1.0.md)，手机验证见 [Work 说明](MOBILE_WORK.md)。
+>
+> Historical record: the status, dimensions, and hashes below reflect the v1.0.0 audit, not the current release status. See the [v1.1.0 release notes](RELEASE-v1.1.0.md) and [mobile Work report](MOBILE_WORK.md) for subsequent changes.
+
 # 官方公开要求审计 · Public official requirements audit
 
 核验日期 / Checked: 2026-09-25。对象 / Package: 月薪喵 Codex Pet。
