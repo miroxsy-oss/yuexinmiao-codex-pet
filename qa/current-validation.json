@@ -2,7 +2,7 @@
   "release_version": "1.1.0",
   "documentation_refresh_date": "2026-09-26",
   "desktop_checks": 44,
-  "installer_tests": 6,
+  "installer_tests": 11,
   "work_checks": 14,
   "atlas_sha256": {
     "dist/yuexinmiao-selected/spritesheet.webp": "9236aecd9c2de4937c6f21d4a26752d7591f9b2ea7b1913ceec353a62b773e7b",
@@ -12,8 +12,8 @@
   "artwork_compared_with_previous_zip": 86,
   "previous_artwork_unchanged": true,
   "new_device_test": false,
-  "scope_zh": "本次为同版文案、元数据与安装提示修订；未重新进行实机测试。",
-  "scope_en": "Same-version documentation, metadata, and installer-message refresh; device tests were not repeated.",
+  "scope_zh": "同版安全加固：安装路径边界、密钥扫描与依赖约束；宠物素材不变，未重复实机测试。",
+  "scope_en": "Same-version security hardening of installation boundaries, secret scanning, and dependencies; artwork unchanged and device tests not repeated.",
   "prior_mobile_test_zh": "此前 iPhone 镜像实测已通过对应图集的处理动画；本轮图集与该版本原文件一致，不重复上传或测试。其他状态分支仍未全覆盖。",
   "prior_mobile_test_en": "Earlier iPhone Mirroring tests verified processing animation for the corresponding atlas. This refresh keeps that version's original atlas unchanged and does not repeat upload or device tests. Other state branches remain incompletely tested."
 }

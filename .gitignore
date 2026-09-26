@@ -2,3 +2,23 @@ __pycache__/
 *.pyc
 .DS_Store
 .venv/
+
+# Local credentials and private configuration / 本机凭据与私有配置
+.env
+.env.*
+!.env.example
+**/auth.json
+**/credentials.json
+**/secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+**/.codex/
+**/.ssh/
+Thumbs.db
+*.log
+
+# Private audit output / 私有审计输出
+.security-audit/
+gitleaks-report*.json

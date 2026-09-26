@@ -13,3 +13,7 @@ This repairs existing bitmap edges rather than converting them to SVG vectors; a
 执行 `scripts/build.py` 可从修正后的源帧重建。`clean_light_outline.py` 仅用于原版帧的一次性转换，不要重复处理已修正版。
 
 Run `scripts/build.py` to rebuild from the corrected source frames. `clean_light_outline.py` is a one-time conversion for original frames; do not apply it repeatedly to corrected frames.
+
+仅当维护原始素材确实需要一次性边缘处理时，使用 Python 3.11 或以上安装 requirements-maintenance.txt。普通安装、图集重建和校验不需要 NumPy；不要重复处理已修正源帧。
+
+Only for necessary one-time maintenance of original edges, use Python 3.11 or later with requirements-maintenance.txt. Normal installation, atlas rebuilding, and validation do not require NumPy. Do not reprocess already-corrected source frames.
