@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: 安装图像依赖 / Install image dependencies
-        run: python -m pip install --only-binary=:all: -r requirements.txt
+        run: 'python -m pip install --only-binary=:all: -r requirements.txt'
       - name: 检查图集、文档与安装更新 / Validate package, docs, and updates
         run: |
           python scripts/check.py
