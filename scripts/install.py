@@ -4,6 +4,12 @@ import argparse,hashlib,json,os,shutil,sys,tempfile,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
+def require_real_directory(path):
+    if path.is_symlink():
+        raise ValueError('拒绝通过符号链接目录安装 / Refusing a symlink directory')
+    if path.exists() and not path.is_dir():
+        raise ValueError('安装路径不是目录 / Installation path is not a directory')
+
 def install(home,existing=None):
     source=ROOT/'dist/yuexinmiao-selected'
     expected={}
@@ -17,6 +23,7 @@ def install(home,existing=None):
     if manifest['id']!='yuexinmiao-selected' or manifest['spritesheetPath']!='spritesheet.webp':
         raise ValueError('安装配置无效 / Invalid package manifest')
     pets=home/'pets';target=pets/'yuexinmiao-selected'
+    require_real_directory(pets)
     def same(path):
         return path.is_dir() and all((path/n).is_file() and (path/n).read_bytes()==data for n,data in payload.items())
     if target.is_symlink():raise ValueError('拒绝覆盖符号链接 / Refusing to replace a symlink')
@@ -44,12 +51,14 @@ def install(home,existing=None):
             if same(target):
                 print(f'Already installed / 已有同一独立副本: {target}');return target
             if target.exists():raise ValueError(f'独立副本目录已存在且内容不同，未覆盖 / Conflicting copy: {target}')
+    backup_parent=home/'pet-backups'
+    if target.exists():require_real_directory(backup_parent)
     pets.mkdir(parents=True,exist_ok=True)
     staged=Path(tempfile.mkdtemp(prefix='.yuexinmiao-',dir=pets));backup=None
     try:
         for name,data in payload.items():(staged/name).write_bytes(data)
         if target.exists():
-            parent=home/'pet-backups';parent.mkdir(exist_ok=True)
+            parent=backup_parent;require_real_directory(parent);parent.mkdir(exist_ok=True)
             backup=parent/f'{target.name}-{time.time_ns()}';target.rename(backup)
         try:staged.rename(target)
         except Exception:

@@ -150,7 +150,7 @@ Uses the Codex custom-pet v1 format: nine states, 57 active frame slots, and a t
 | 检查项 · Check | 结果 · Result |
 | --- | --- |
 | 图集结构 · Atlas structure | 有效帧非空、未用格透明、无切格越界 · Active frames nonempty, unused cells transparent, no cell-edge clipping |
-| 安装更新测试 · Installer update tests | 6 项通过 · 6 passed |
+| 安装更新测试 · Installer update tests | 11 项通过 · 11 passed |
 | 独立包检查 · Independent package checks | 桌面 44、Work 14 项通过 · Desktop 44, Work 14 passed |
 | 源帧重建 · Rebuild from source frames | 与已验证图集逐字节一致 · Byte-identical to the validated atlas |
 
@@ -224,3 +224,7 @@ See the [installation guide](docs/INSTALL.md) for older-version handling and iPh
 自动化检查配置覆盖 Linux、macOS 和 Windows；具体通过状态以 GitHub Actions 结果为准。这些是包与安装器测试，不是三个系统上的应用 UI 实测。
 
 The workflow targets Linux, macOS, and Windows; consult GitHub Actions for actual results. These are package and installer checks, not live application UI tests on all three systems.
+
+常规重建依赖已固定版本；仅一次性图像维护需要额外的 requirements-maintenance.txt（Python 3.11+）。安全扫描和依赖更新说明见 [安全文档](SECURITY.md)。
+
+Regular build dependencies use exact versions. Only one-time image maintenance needs requirements-maintenance.txt (Python 3.11+). See the [security guide](SECURITY.md) for secret scanning and dependency updates.
