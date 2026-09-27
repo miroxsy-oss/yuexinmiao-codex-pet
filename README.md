@@ -228,3 +228,7 @@ The workflow targets Linux, macOS, and Windows; consult GitHub Actions for actua
 常规重建依赖已固定版本；仅一次性图像维护需要额外的 requirements-maintenance.txt（Python 3.11+）。安全扫描和依赖更新说明见 [安全文档](SECURITY.md)。
 
 Regular build dependencies use exact versions. Only one-time image maintenance needs requirements-maintenance.txt (Python 3.11+). See the [security guide](SECURITY.md) for secret scanning and dependency updates.
+
+维护依赖按 Python 版本选择：3.11 使用 NumPy 2.3.5，3.12 及以上使用 2.5.3。CI 在 Windows、macOS、Linux 的 Python 3.11 和 3.12 上校验全部 57 帧的内存处理结果；不会覆盖素材。
+
+Maintenance dependencies select NumPy 2.3.5 on Python 3.11 and 2.5.3 on Python 3.12+. CI checks in-memory processing of all 57 frames on Windows, macOS, and Linux with Python 3.11 and 3.12; it does not overwrite artwork.
