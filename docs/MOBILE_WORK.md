@@ -1,7 +1,7 @@
 # 手机 Work 显示与验证范围 · Mobile Work test scope
 
-2026-09-26，通过真实 iPhone 镜像测试，未用浏览器窄屏模拟。<br>
-Tested on September 26, 2026 using an actual iPhone through iPhone Mirroring, not a narrow browser simulation.
+以下为 2026-09-26 通过真实 iPhone 镜像取得的历史测试记录，未用浏览器窄屏模拟。本次文档维护未重新进行手机实测；这些记录不代表新版客户端的全部行为。<br>
+The following historical observations were recorded on September 26, 2026 using an actual iPhone through iPhone Mirroring, not a narrow browser simulation. This documentation update did not repeat mobile device testing; the records do not establish all behavior of newer clients.
 
 | 图集 · Atlas | 思考／处理 · Reasoning / processing | 联网搜索 · Web search | 完成后 · After completion |
 | --- | --- | --- | --- |
@@ -47,5 +47,15 @@ These samples were captured from the small task-side icon; enlarging them cannot
 
 </details>
 
-公开仓库仅含宠物局部截图，不包含个人设置、账号或完整对话截图。当前维护者账号已启用新版并清理旧 Work 条目；下载者需在自己的账号上传、选择和验证。<br>
-Public screenshots exclude personal settings, account details, and full conversations. The maintainer’s account has the new entry selected and older Work entries removed; users must upload, select, and verify it in their own accounts.
+公开仓库仅含宠物局部截图，不包含个人设置、账号或完整对话截图。下载者需在自己的账号盘点已有条目、选择目标并验证；已有版本按稳定 ID 更新，避免重复创建。<br>
+Public screenshots exclude personal settings, account details, and full conversations. Users must inventory their own account library, select the intended entry, and verify it. Update an existing version by stable ID to avoid duplicates.
+
+## 后续更新与重新验收 · Updates and retesting
+
+优先使用官方 Work Pets MCP，完整读取宠物列表和当前选中 ID。新版客户端可能迁移本机宠物到账号；列表再次出现九状态条目，不足以说明原来删除失败。结合稳定 ID、图集与用途识别条目，保留用户需要的版本后，再按明确授权清理重复项。
+
+Use official Work Pets MCP first to read the complete library and active ID. Newer clients may migrate local pets into the account; a reappearing nine-state entry alone does not prove an earlier deletion failed. Identify entries by stable ID, artwork, and purpose, retain the intended edition, and remove duplicates only with explicit authorization.
+
+本包保持 v1。更换云端图集前须验证当前上传工具是否接受 v1；不能因为新建工具要求 v2 就强制转换已正常工作的版本。原 ID 的 `update_pet` 更新优先，工具缺失时再检查官方网页；完整流程见 [安装指南](INSTALL.md)。账号更新成功与手机动画实测应分别记录，待授权、失败等未测分支仍保持未测。
+
+This package remains v1. Before replacing cloud artwork, verify whether the current upload tools accept v1; a creation tool’s v2 requirement is not a reason to force-convert a working pet. Prefer `update_pet` on the existing ID and inspect the official web controls only if a required tool capability is missing; see the [installation guide](INSTALL.md). Record account-update success separately from observed mobile animation, and continue marking untested approval-wait and failure branches as untested.

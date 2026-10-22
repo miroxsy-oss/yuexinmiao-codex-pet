@@ -106,9 +106,9 @@ The internal folder name remains `yuexinmiao-selected`; the display name is 「�
 
 ## 手机 Work 与跨端使用 · Mobile Work and cross-device setup
 
-**桌面用九状态版，手机 Work 推荐捂鼻扇风专用版。** 两者分别安装、分别选择；本机安装不会自动同步到账号。
+**桌面素材保留九种动作，手机 Work 推荐捂鼻扇风专用版。** 安装器只写入本机，但新版客户端可能自动将本机宠物迁移到账号，不能假定两端始终独立。更新前先检查账号宠物列表及当前选中项，避免重复创建或切错版本。
 
-**Use the nine-state desktop edition locally and the fanning edition for mobile Work.** Local installation and account upload are separate.
+**Keep the nine-state artwork for desktop and use the fanning edition for mobile Work.** The installer only writes local files, but newer clients may automatically migrate local pets into the account. Do not assume the two surfaces remain independent. Before updating, check the account library and active selection to avoid duplicates or selecting the wrong edition.
 
 | 使用位置 · Where | 文件 · File | 显示方式 · Appearance |
 | --- | --- | --- |
@@ -127,13 +127,17 @@ iPhone Mirroring tests on September 26, 2026 confirmed fanning during Python pro
 
 ### 怎么使用 · Setup
 
-在电脑浏览器的 ChatGPT「设置 → 虚拟宠物」上传 **`dist/yuexinmiao-work-fanning/spritesheet.webp`**，命名为「月薪喵 Work · 捂鼻扇风」，选中并刷新确认。手机使用相同账号与工作区，重新进入 Work；可在「设置 → 个性化 → 宠物」核对当前选择。若仍显示旧图标，重新打开 App 后再测试。
+请 Codex 优先通过官方 Work Pets MCP 盘点账号中的全部条目，按稳定 ID 确认「月薪喵 Work · 捂鼻扇风」及当前选中项。已有条目使用 `update_pet` 原 ID 更新；不要为更新反复新建。图集使用 **`dist/yuexinmiao-work-fanning/spritesheet.webp`**，替换前须确认当前上传与验证工具接受它的 v1 格式。现有可用的 v1 保持原样，不为满足新建工具默认规格而强制升级。
 
-Upload **`dist/yuexinmiao-work-fanning/spritesheet.webp`** in ChatGPT’s web pet settings, name it 「月薪喵 Work · 捂鼻扇风」, select it, and verify after reloading. Use the same account and workspace on your phone and check the selection under Settings → Personalization → Pet. Reopen the app if cached artwork remains.
+Ask Codex to use the official Work Pets MCP first to list the entire account library and resolve 「月薪喵 Work · 捂鼻扇风」 and the active selection by stable ID. Update an existing entry with `update_pet` using that same ID instead of creating duplicates. The artwork is **`dist/yuexinmiao-work-fanning/spritesheet.webp`**. Before replacing it, verify that the current upload and validation tools accept its v1 format. Preserve the working v1 pet rather than converting it just to meet a creation tool’s defaults.
 
-Work 使用账号级图集，网页版也会读取这一版；本机 Codex 九状态版独立保留。更新时优先检查原条目是否支持替换图集；若必须新建，先验证新版，再按用户选择清理旧版并保留本机备份。
+仅当 MCP 缺少所需能力时，检查 ChatGPT 网页的官方宠物入口；同样先检查已有条目和格式兼容性。首次安装才创建条目，完成后选中并重新读取列表确认保存。手机使用相同账号与工作区，重新进入 Work 验证动画；旧图标可能需要重新打开 App。Work 的选择也影响网页版；本机九状态素材保留，但实际显示应在各客户端分别核验。
 
-The Work atlas is account-level and also applies on the web; the local nine-state Codex edition remains separate. Prefer replacing the existing atlas when supported; otherwise validate the new entry before removing an old version according to the user’s choice, keeping local backups.
+Use ChatGPT’s official web pet controls only when MCP lacks a required capability, checking existing entries and format compatibility there too. Create an entry for a first installation, then select it and read the library again to verify persistence. Use the same account and workspace on the phone and reopen Work to test motion; cached artwork may require reopening the app. Work selection also affects the web. Retain the local nine-state assets and verify the actual display on each client.
+
+发现重复项时，先按 ID、图集和用途确认哪个是旧版，再按用户明确选择删除或保留；不要只凭名称或缩略图删除。工具无法确认 v1 替换兼容性时，保留现有条目并说明限制，不新建副本或修改版本号绕过验证。
+
+If duplicates exist, resolve the older edition by ID, artwork, and purpose before following the user’s explicit delete-or-retain choice; names and thumbnails alone are insufficient. If v1 replacement compatibility cannot be confirmed, keep the existing entry and report the limitation instead of creating a duplicate or changing the version number to bypass validation.
 
 👉 **[完整安装、更新与手机验收指南 · Full setup and verification guide](docs/INSTALL.md)** · **[实测范围 · Test scope](docs/MOBILE_WORK.md)**
 
@@ -215,9 +219,9 @@ If you enjoy this little companion, or it saves you time generating, selecting, 
 **桌面宠物 · Codex 自定义宠物 · 桌面美化**<br>
 **Codex Pet · Codex Custom Pet · Desktop Customization · Yuexinmiao**
 
-更新时的旧版处理与 iPhone 镜像验收流程见 [安装指南](docs/INSTALL.md)。Work 新版验证后，由用户选择清理旧条目或保留；本机备份始终保留。
+更新时的旧版处理与 iPhone 镜像验收流程见 [安装指南](docs/INSTALL.md)。优先更新同一个 Work 条目；确有旧条目时，核对 ID 后按用户选择清理或保留，并保留本机回滚备份。
 
-See the [installation guide](docs/INSTALL.md) for older-version handling and iPhone Mirroring verification. After validating the new Work entry, the user chooses whether to remove or retain older entries; local backups are retained.
+See the [installation guide](docs/INSTALL.md) for older-version handling and iPhone Mirroring verification. Prefer updating the same Work entry; if older entries exist, identify their IDs and follow the user’s delete-or-retain choice while retaining local rollback backups.
 
 [参与维护 · Contributing](CONTRIBUTING.md) · [安全与反馈 · Security](SECURITY.md) · [图集规格 · Atlas contract](docs/REFERENCE.md) · [当前与历史检查 · Validation scope](qa/README.md)
 

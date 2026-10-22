@@ -20,15 +20,31 @@ Check exposed MCP capabilities first, then supported APIs or CLIs. Use GUI contr
 更新已安装版本前，询问替换并备份还是并存；本会话已有明确选择时直接沿用，不重复询问。首次安装运行 `python scripts/install.py`；已授权更新使用 `--existing replace` 或 `--existing keep-both`。没有明确选择的非交互更新应停止且不修改文件。安装器检查校验值，安装到 `$CODEX_HOME/pets` 或 `~/.codex/pets`，把不同的旧版移到宠物库外的备份目录。安装仅需 Python 标准库；重建或检查图像才需要 Pillow。普通安装不得重新生成图集。<br>
 Before updating an existing installation, ask whether to replace the previous version (with a rollback backup outside the pet library) or keep both versions. Reuse an explicit choice already made in this session; do not ask twice. For a fresh install, run `python scripts/install.py`. For an authorized update, use `python scripts/install.py --existing replace` or `--existing keep-both` according to that choice. Without a choice, noninteractive updates stop without changing files. It verifies the bundled checksums, installs under `$CODEX_HOME/pets` or `~/.codex/pets`, and backs up a different existing copy of the same pet. Installation needs only Python's standard library; Pillow is needed only to rebuild or audit images. Do not regenerate sprites or invoke image generation for a normal install.
 
-## Work 上传与旧版处理 · Work upload and older versions
+## Work 账号安装、更新与旧版处理 · Work account setup, updates, and older versions
 
-报告安装位置与「月薪喵 Codex Pet」显示名称。未验证界面前，不得声称已经切换选中项。Work／手机按 `docs/INSTALL.md` 操作：本地安装不自动同步账号。经授权并具备已登录工具后，先检查原条目是否有官方替换图集能力，不能假定存在。如无替换能力，仅上传一次 `dist/yuexinmiao-work-fanning/spritesheet.webp`，激活并刷新核验。新版通过后询问删除已识别旧条目还是保留；永久删除应在执行时确认。仅删除明确批准的条目，保留官方及其他宠物，再刷新核验剩余列表与选中项。不得在新版验证前删除旧版。本地备份独立保留。<br>
-Tell the user the installed path and that the pet picker entry is 「月薪喵 Codex Pet」. Do not claim the live UI switched unless verified. For Work or mobile requests, follow `docs/INSTALL.md`: local installation does not synchronize the account pet. With the user’s authorization and available authenticated browser tooling, upload `dist/yuexinmiao-work-fanning/spritesheet.webp` through the official ChatGPT pet UI, select the new entry, and verify persistence after reload. Before uploading, inspect the existing pet actions for an official sprite replacement option; do not assume one exists. If replacement is unavailable, upload once, activate the new entry, reload and verify it, then ask whether to delete the identified previous Yuexinmiao entries or keep them. Permanent account deletion requires confirmation at action time. Delete only explicitly approved entries, preserve official and unrelated pets, and reload to verify both the remaining list and active selection. Never delete the old account entry before the new one passes validation. Local backups are retained independently.
+报告本机安装位置与「月薪喵 Codex Pet」显示名称。未验证界面前，不得声称已经切换选中项。安装器只写本机，但新版客户端可能将本机条目迁移到账号；不要假设本机和账号列表始终独立。按 `docs/INSTALL.md` 操作，保留九状态本机素材和有效的 v1 Work 图集。
+
+Report the local installation path and display name 「月薪喵 Codex Pet」. Claim a live selection change only after verifying it. The installer only writes local files, but newer clients may migrate those entries to the account; do not assume local and account libraries always remain independent. Follow `docs/INSTALL.md`, retaining the nine-state local assets and working v1 Work atlas.
+
+1. 优先使用官方 Work Pets MCP 的 `list_pets`，读取全部分页，按稳定 ID、`is_custom`、图集用途及 `active_pet_id` / `is_active` 确认目标。名称可能重复，URL 会过期，不能作为唯一身份。多个候选时先确认具体条目。<br>
+   Prefer official Work Pets MCP `list_pets`, follow every page, and resolve the target by stable ID, `is_custom`, atlas purpose, and `active_pet_id` / `is_active`. Names can repeat and URLs expire; neither is unique durable identity. Resolve multiple candidates before writing.
+
+2. 已有目标通过 `update_pet` 原 ID 更新，不调用 `create_pet` 代替更新。只改名称或描述时只提交对应字段，不上传图集。更换图集时先下载并备份现有版本，再查当前 schema、验证器及上传要求；使用 `dist/yuexinmiao-work-fanning/spritesheet.webp` 原素材。<br>
+   Update an existing target through `update_pet` using the same ID, never `create_pet` as a substitute. For metadata-only changes, submit only the requested fields without uploading artwork. For atlas replacement, download and back up the stored sheet, inspect the current schema, validator, and upload requirements, and reuse `dist/yuexinmiao-work-fanning/spritesheet.webp`.
+
+3. 当前 v1 替换兼容性须由实际工具验证，历史运行成功不能代替。仅验证接受 v1 后，按官方上传流程取得 `upload_session_id` 并用于原 ID 更新；返回的 ID 必须一致。工具只接受 v2 或无法验证时，保留现有宠物并报告限制，不改版本号绕过检查、不强制升级或新建副本。只有首次安装且确认无目标条目，才使用经验证兼容的创建流程。<br>
+   Verify current v1 replacement compatibility with actual tools; historical runtime success is insufficient. Only after tools accept v1, follow the official upload flow and pass its `upload_session_id` to the original-ID update; verify the returned ID is unchanged. If tools only accept v2 or cannot validate compatibility, retain the current pet and report the limitation. Do not relabel its version, force an upgrade, or create a duplicate. Use a validated creation flow only for a first installation after confirming no target exists.
+
+4. 用户要求启用才执行 `select_pet`；纯更新保留原选中项。重新读取完整列表验证 ID、保存内容及当前选中项。MCP 缺少需要的能力时再检查官方网页，沿用相同的身份和兼容性检查；不得把网页入口存在当成更新能力已验证。<br>
+   Use `select_pet` only when activation was requested; preserve the prior selection for an update-only request. Reread the full list to verify the ID, saved content, and active state. Inspect official web controls only when MCP lacks a required capability, applying the same identity and compatibility checks. A visible web entry point does not prove replacement support.
+
+5. 迁移或历史安装产生重复项时，先验证需保留条目，再确认用户对具体旧 ID 的删除或保留选择。删除前说明名称、ID 和永久删除影响；本会话对这些条目已有明确授权时沿用。仅删除已批准的自定义旧条目，保留官方及其他宠物。再读取列表验证删除结果与选中状态，本机回滚备份独立保留。<br>
+   For duplicates from migration or earlier installations, first verify the entry to retain, then establish the user’s delete-or-retain choice for the specific older IDs. Identify the name, ID, and permanent effect before deletion; honor explicit session authorization already given for those entries. Delete only approved older custom pets, preserving built-in and unrelated pets. Reread the library to verify deletion and the active state, retaining local rollback backups independently.
 
 ## 结果报告 · Reporting results
 
 不得使用私密凭据，也不得凭网页成功宣称手机成功。分别报告本机安装、账号上传、网页显示和实机测试；未测试环节标注待确认。缺少操作工具或登录时，完成本机准备，仅说明真正剩余的一步。<br>
-Do not use private credentials or claim mobile success from web-only evidence. Report desktop installation, account upload, web display, and actual mobile testing separately; mark untested stages as pending. If browser control or authentication is unavailable, finish local preparation and explain the exact remaining step.
+Do not use private credentials or claim mobile success from web-only evidence. Report desktop installation, account upload, web display, and actual mobile testing separately; mark untested stages as pending. If required tool capabilities or authentication are unavailable, finish local preparation and explain the exact remaining step.
 
 ## 动作修改 · Animation changes
 
