@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def clean(frame):
     frame=frame.convert('RGBA')
-    frame.putdata([p if p[3] else (0,0,0,0) for p in frame.getdata()])
+    frame.putdata([p if p[3] else (0,0,0,0) for p in frame.get_flattened_data()])
     return frame
 
 def compose():
