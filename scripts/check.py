@@ -16,7 +16,7 @@ check('sprite_version',manifest.get('spriteVersionNumber',1)==1)
 check('sprite_path',manifest.get('spritesheetPath')=='spritesheet.webp')
 with Image.open(pet/'spritesheet.webp') as source:
     check('WEBP',source.format=='WEBP');check('RGBA',source.mode=='RGBA');check('1536x1872',source.size==(1536,1872));atlas=source.convert('RGBA')
-check('transparent_RGB_zero',all(not any(p[:3]) for p in atlas.getdata() if p[3]==0))
+check('transparent_RGB_zero',all(not any(p[:3]) for p in atlas.get_flattened_data() if p[3]==0))
 check('rebuild_pixel_equal',atlas.tobytes()==compose().tobytes())
 for row,(state,count) in enumerate(STATES):
     fs=[atlas.crop((c*192,row*208,(c+1)*192,(row+1)*208)) for c in range(8)]

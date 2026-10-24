@@ -177,9 +177,9 @@ The tested desktop player returns to idle after three repetitions of a non-idle 
 
 ## 开发与自定义 · Development and customization
 
-只想使用宠物，完成安装即可。需要重建或检查图集时，使用 Python 3.10 或以上运行：
+只想使用宠物，完成安装即可。需要重建或检查图集时，使用 Python 3.11 或以上运行：
 
-For everyday use, installation is all you need. To rebuild or validate the atlas, run the following with Python 3.10 or later:
+For everyday use, installation is all you need. To rebuild or validate the atlas, run the following with Python 3.11 or later:
 
 ```sh
 python -m pip install -r requirements.txt
@@ -190,6 +190,10 @@ python scripts/build_work.py
 python scripts/check_work.py
 python -m unittest discover -s tests -q
 ```
+
+当前主分支的重建与图像校验使用 Pillow 13，最低需要 Python 3.11；Python 3.10 无法安装这组依赖。直接安装现成宠物不需要 Pillow，也不受这次图像工具依赖升级影响。已发布的 v1.0.0、v1.1.0 附件保持原样，本次仅更新仓库源码与说明，不升版。
+
+The current main branch uses Pillow 13 for rebuilding and image validation, requiring Python 3.11 or later; these dependencies cannot be installed on Python 3.10. Installing the ready-made pet does not require Pillow and is unaffected by this image-tool dependency update. Existing v1.0.0 and v1.1.0 release assets remain unchanged; this update applies only to repository source and documentation, with no version bump.
 
 最终源帧位于 `source/frames/`，动作映射见 `source/selection.json`，当前检查结果保存在 `qa/`，旧实测记录单独保存在 `qa/history/`。
 
@@ -225,9 +229,9 @@ See the [installation guide](docs/INSTALL.md) for older-version handling and iPh
 
 [参与维护 · Contributing](CONTRIBUTING.md) · [安全与反馈 · Security](SECURITY.md) · [图集规格 · Atlas contract](docs/REFERENCE.md) · [当前与历史检查 · Validation scope](qa/README.md)
 
-自动化检查配置覆盖 Linux、macOS 和 Windows；具体通过状态以 GitHub Actions 结果为准。这些是包与安装器测试，不是三个系统上的应用 UI 实测。
+自动化检查配置覆盖 Linux、macOS 和 Windows 的 Python 3.11、3.12；包括图集内存重建、透明 WebP 像素回读、文档和安装器测试，具体通过状态以 GitHub Actions 结果为准。这些是包与安装器测试，不是三个系统上的应用 UI 实测。
 
-The workflow targets Linux, macOS, and Windows; consult GitHub Actions for actual results. These are package and installer checks, not live application UI tests on all three systems.
+The workflow targets Python 3.11 and 3.12 on Linux, macOS, and Windows, including in-memory atlas rebuilding, transparent WebP pixel round-trips, documentation, and installer tests; consult GitHub Actions for actual results. These are package and installer checks, not live application UI tests on all three systems.
 
 常规重建依赖已固定版本；仅一次性图像维护需要额外的 requirements-maintenance.txt（Python 3.11+）。安全扫描和依赖更新说明见 [安全文档](SECURITY.md)。
 
