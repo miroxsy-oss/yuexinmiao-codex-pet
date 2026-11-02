@@ -18,6 +18,6 @@ Run `scripts/build.py` to rebuild from the corrected source frames. `clean_light
 
 Only for necessary one-time maintenance of original edges, use Python 3.11 or later with requirements-maintenance.txt. Normal installation, atlas rebuilding, and validation do not require NumPy. Do not reprocess already-corrected source frames.
 
-维护依赖按 Python 版本选择：3.11 使用 NumPy 2.3.5，3.12 及以上使用 2.5.3。CI 在 Windows、macOS、Linux 的 Python 3.11 和 3.12 上校验全部 57 帧的内存处理结果；不会覆盖素材。
+维护依赖按 Python 版本选择：3.11 使用 NumPy 2.3.5，3.12 及以上使用 2.5.4。CI 在 Windows、macOS、Linux 的 Python 3.11 和 3.12 上校验全部 57 帧的内存处理结果；不会覆盖素材。
 
-Maintenance dependencies select NumPy 2.3.5 on Python 3.11 and 2.5.3 on Python 3.12+. CI checks in-memory processing of all 57 frames on Windows, macOS, and Linux with Python 3.11 and 3.12; it does not overwrite artwork.
+Maintenance dependencies select NumPy 2.3.5 on Python 3.11 and 2.5.4 on Python 3.12+. CI checks in-memory processing of all 57 frames on Windows, macOS, and Linux with Python 3.11 and 3.12; it does not overwrite artwork.

@@ -237,6 +237,6 @@ The workflow targets Python 3.11 and 3.12 on Linux, macOS, and Windows, includin
 
 Regular build dependencies use exact versions. Only one-time image maintenance needs requirements-maintenance.txt (Python 3.11+). See the [security guide](SECURITY.md) for secret scanning and dependency updates.
 
-维护依赖按 Python 版本选择：3.11 使用 NumPy 2.3.5，3.12 及以上使用 2.5.3。CI 在 Windows、macOS、Linux 的 Python 3.11 和 3.12 上校验全部 57 帧的内存处理结果；不会覆盖素材。
+维护依赖按 Python 版本选择：3.11 使用 NumPy 2.3.5，3.12 及以上使用 2.5.4。CI 在 Windows、macOS、Linux 的 Python 3.11 和 3.12 上校验全部 57 帧的内存处理结果；不会覆盖素材。
 
-Maintenance dependencies select NumPy 2.3.5 on Python 3.11 and 2.5.3 on Python 3.12+. CI checks in-memory processing of all 57 frames on Windows, macOS, and Linux with Python 3.11 and 3.12; it does not overwrite artwork.
+Maintenance dependencies select NumPy 2.3.5 on Python 3.11 and 2.5.4 on Python 3.12+. CI checks in-memory processing of all 57 frames on Windows, macOS, and Linux with Python 3.11 and 3.12; it does not overwrite artwork.
