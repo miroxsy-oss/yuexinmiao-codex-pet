@@ -80,6 +80,12 @@ After verifying the saved account entry and active selection, check the mobile a
 
 **Historical device verification, September 26, 2026 (not a retest of newer clients):** the Work edition was uploaded, activated, and verified after reload and in mobile settings. Actual iPhone Mirroring tests showed fanning during Python processing and web search; the icon disappeared after completion. The local nine-state atlas remained unchanged. The original atlas and official default pet showed no clear animation-group switch in tested scenarios; this does not prove that mobile supports only one state. Approval waits, failures, and other branches remain unverified; see the [mobile test report](MOBILE_WORK.md).
 
+## 离线安装防护检查 · Offline installer safeguard checks
+
+从当前仓库源码运行 `python3 scripts/check-safeguards.py`（Windows 使用 `python`）。检查只用临时目录验证安装防护，不安装到真实 Codex 目录，不需要管理员权限。两组必需测试分别报告发现数、实际执行数和跳过数；缺文件、零测试、整组跳过或测试失败均返回非零退出码，部分跳过及其原因会显示。此入口也在 Python 3.11 / 3.12 的三平台 CI 中运行；完整测试继续保留。既有 Release 附件不包含本次新增入口。
+
+From the current repository source, run `python3 scripts/check-safeguards.py` (`python` on Windows). Checks use temporary directories, do not install into the real Codex directory, and need no administrator privileges. Each required group reports discovered, executed, and skipped counts. Missing files, zero tests, entirely skipped groups, or test failures return a nonzero exit status; partial skips and their reasons remain visible. This entry also runs in CI on all three platforms with Python 3.11 / 3.12; the full test suite remains in place. Existing Release assets do not include this new entry.
+
 ## 4. 交给 Codex 复用 · Reuse with Codex
 
 下载仓库后，把仓库链接或本地目录交给 Codex，并使用这段提示词：

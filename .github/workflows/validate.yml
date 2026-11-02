@@ -32,6 +32,8 @@ jobs:
           python scripts/check.py
           python scripts/check_docs.py
           python -m unittest discover -s tests -q
+      - name: 检查安装防护测试确实执行 / Require executed installer safeguard tests
+        run: python scripts/check-safeguards.py
       - name: 检查 Work 图集 / Validate Work atlas
         run: python scripts/check_work.py
   maintenance:
